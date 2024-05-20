@@ -1,0 +1,14 @@
+{
+	"Targets": [
+		{
+			"Name": "GALAGA_USFX_LAB03",
+			"Path": "D:\\PROGRAMACION AVANZADA\\USFX\\PATRONES\\PATRON FACADE\\GALAGA_USFX_LAB03\\Source\\GALAGA_USFX_LAB03.Target.cs",
+			"Type": "Game"
+		},
+		{
+			"Name": "GALAGA_USFX_LAB03Editor",
+			"Path": "D:\\PROGRAMACION AVANZADA\\USFX\\PATRONES\\PATRON FACADE\\GALAGA_USFX_LAB03\\Source\\GALAGA_USFX_LAB03Editor.Target.cs",
+			"Type": "Editor"
+		}
+	]
+}
