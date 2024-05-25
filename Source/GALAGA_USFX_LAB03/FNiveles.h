@@ -4,6 +4,7 @@
 
 #include "CoreMinimal.h"
 #include "GameFramework/Actor.h"
+#include "FabricaNaves.h"
 #include "FNiveles.generated.h"
 
 UCLASS()
@@ -24,9 +25,24 @@ public:
 	virtual void Tick(float DeltaTime) override;
 
 public:
-	void CrearNodriza();
-	void CrearObstaculos();
-	void CrearNaveEnemigas();
-	void MovimientoNaves();
+	//void CrearNodriza();
+	//void CrearObstaculos();
+	//void CrearNaveEnemigas();
+	//void MovimientoNaves();
+
+	AFabricaNaves* FabricaAereas;
+	AFabricaNaves* FabricaTerrestres;
+	AFabricaNaves* FabricaAcuaticas;
+
+	TArray<ANaveEnemiga*> TANavesEnemigas;
+
+	FVector PosEscuadronAereas;
+	FVector PosEscuadronTerrestres;
+	FVector PosEscuadronAcuaticas;
+
+	void EstablecerFabricas();
+	void CrearEscuadronAereas();
+	void CrearEscuadronTerrestres();
+	void CrearEscuadronAcuaticas();
 
 };

@@ -4,6 +4,7 @@
 
 #include "CoreMinimal.h"
 #include "GameFramework/Actor.h"
+#include "IBuildNave.h"
 #include "DirectorNaveNodriza.generated.h"
 
 UCLASS()
@@ -15,7 +16,7 @@ public:
 	// Sets default values for this actor's properties
 	ADirectorNaveNodriza();
 
-	class IBuildNave* GeneradorNaveNodriza;
+	class IIBuildNave* GeneradorNaveNodriza;
 
 protected:
 	// Called when the game starts or when spawned

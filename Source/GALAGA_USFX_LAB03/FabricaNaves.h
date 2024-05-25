@@ -3,6 +3,7 @@
 #pragma once
 
 #include "CoreMinimal.h"
+#include "NaveEnemiga.h"
 #include "GameFramework/Actor.h"
 #include "FabricaNaves.generated.h"
 
@@ -23,7 +24,7 @@ public:
 	// Called every frame
 	virtual void Tick(float DeltaTime) override;
 
-	class ANaveEnemiga* GenerarNave(int NumNave);
-	virtual class ANaveEnenmiga* CreacionNaves(int tipo) PURE_VIRTUAL(AFabricaNaves::CreacionNaves, return nullptr;);
+	ANaveEnemiga* GenerarNave(FString Tipo);
+	virtual ANaveEnemiga* CreacionNaves(FString tipoNave) PURE_VIRTUAL(AFabricaNaves::CreacionNaves, return nullptr;);
 
 };

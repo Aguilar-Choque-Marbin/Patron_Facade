@@ -27,18 +27,29 @@ void ADirectorNaveNodriza::Tick(float DeltaTime)
 
 void ADirectorNaveNodriza::OrdenarConstruccionNaveNodriza(AActor* Generador)
 {
+	GeneradorNaveNodriza = Cast<IIBuildNave>(Generador); //Aqui se realiza el casteo que se necesita para que funcione el metodo
 }
 
 void ADirectorNaveNodriza::CrearNaveNodriza()
 {
+	GeneradorNaveNodriza->ConstruirNuevaNave(1); //Llamamos a los metodos de la clase IBuildNave
+	GeneradorNaveNodriza->ConstruirArmas(1); //Llamamos a los metodos de la clase IBuildNave
+	GeneradorNaveNodriza->ConstruirMotores(1); //Llamamos a los metodos de la clase IBuildNave
+	GeneradorNaveNodriza->ConstruirProyectiles(1); //Llamamos a los metodos de la clase IBuildNave
+	GEngine->AddOnScreenDebugMessage(-1, 15.f, FColor::Red, TEXT("Nave Nodriza1 Implementada")); //Mensaje en pantalla
 }
 
 void ADirectorNaveNodriza::CrearNaveNodriza2()
 {
+	GeneradorNaveNodriza->ConstruirNuevaNave(2); //Llamamos a los metodos de la clase IBuildNave
+	GeneradorNaveNodriza->ConstruirArmas(2); //Llamamos a los metodos de la clase IBuildNave
+	GeneradorNaveNodriza->ConstruirMotores(2); //Llamamos a los metodos de la clase IBuildNave
+	GeneradorNaveNodriza->ConstruirProyectiles(2); //Llamamos a los metodos de la clase IBuildNave
+	GEngine->AddOnScreenDebugMessage(-1, 15.f, FColor::Red, TEXT("Nave Nodriza2 Implementada")); //Mensaje en pantalla
 }
 
 ANaveNodriza* ADirectorNaveNodriza::CreacionNaveNodriza()
 {
-	return nullptr;
+	return GeneradorNaveNodriza->NaveNodriza();
 }
 
