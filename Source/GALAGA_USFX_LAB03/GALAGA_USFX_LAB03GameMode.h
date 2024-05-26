@@ -41,10 +41,10 @@ private:
 	int TiempoTranscurrido;
 
 public: 
-	class ADirectorNaveNodriza* DirectorNodriza;
+	//class ADirectorNaveNodriza* DirectorNodriza;
 
-	class ABuildNaveNodrizaConcreto* NaveNodrizaConcreto;
-	class ABuildNaveNodrizaBasica* NaveNodrizaBasica;
+	//class ABuildNaveNodrizaConcreto* NaveNodrizaConcreto;
+	//class ABuildNaveNodrizaBasica* NaveNodrizaBasica;
 
 	class AFNiveles* Niveles;
 };

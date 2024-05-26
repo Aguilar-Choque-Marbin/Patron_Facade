@@ -28,5 +28,5 @@ void ANaveEnemigaTransporte::Mover(float DeltaTime)
 void ANaveEnemigaTransporte::Tick(float DeltaTime)
 {
 	Super::Tick(DeltaTime);
-	Mover(DeltaTime);
+	//Mover(DeltaTime);
 }

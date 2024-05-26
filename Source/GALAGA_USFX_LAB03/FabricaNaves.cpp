@@ -27,7 +27,7 @@ void AFabricaNaves::Tick(float DeltaTime)
 
 ANaveEnemiga* AFabricaNaves::GenerarNave(FString tipoNave)
 {
-	ANaveEnemiga* NaveEnemiga = CreacionNaves(tipoNave);
-	return CreacionNaves(tipoNave);
+	ANaveEnemiga* NaveEnemigas = CreacionNaves(tipoNave);
+	return NaveEnemigas;
 }
 

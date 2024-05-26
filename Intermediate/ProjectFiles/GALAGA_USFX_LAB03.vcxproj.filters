@@ -3,7 +3,7 @@
   <ItemGroup>
     <None Include="..\..\GALAGA_USFX_LAB03.uproject" />
     <Filter Include="Source">
-      <UniqueIdentifier>{968D68FA-DEEC-4E2E-A491-6CC79441065E}</UniqueIdentifier>
+      <UniqueIdentifier>{B1A3D209-2A2A-4ACA-B0C5-A17D614006A8}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Source\GALAGA_USFX_LAB03.Target.cs">
       <Filter>Source</Filter>
@@ -14,7 +14,7 @@
     <None Include="..\..\.gitattributes" />
     <None Include="..\..\.gitignore" />
     <Filter Include="Config">
-      <UniqueIdentifier>{4E1D52C1-647D-49B6-8C84-52F95DC71509}</UniqueIdentifier>
+      <UniqueIdentifier>{E306AA1D-7459-4C2B-AE85-5ADC23EDB2E4}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Config\DefaultEditor.ini">
       <Filter>Config</Filter>
@@ -32,7 +32,7 @@
       <Filter>Config</Filter>
     </None>
     <Filter Include="Source\GALAGA_USFX_LAB03">
-      <UniqueIdentifier>{B096EE8A-ADA7-474E-BA41-60BA8882A6F6}</UniqueIdentifier>
+      <UniqueIdentifier>{E11A994E-F00C-4078-B15F-5163AC26BD20}</UniqueIdentifier>
     </Filter>
     <ClCompile Include="..\..\Source\GALAGA_USFX_LAB03\ArmaNave.cpp">
       <Filter>Source\GALAGA_USFX_LAB03</Filter>

@@ -1,12 +1,15 @@
 // Fill out your copyright notice in the Description page of Project Settings.
 
+#include "FabricaNavesTerrestres.h"
 
 #include "NaveEnemigaReabastecimiento.h"
-#include "FabricaNavesTerrestres.h"
+
+
+
 
 ANaveEnemiga* AFabricaNavesTerrestres::CreacionNaves(FString tipoNave)
 {
-	if (tipoNave == "Reabastecimiento")
+	if (tipoNave.Equals("Reabastecimiento"))
 	{
 		return GetWorld()->SpawnActor<ANaveEnemigaReabastecimiento>(ANaveEnemigaReabastecimiento::StaticClass());
 	}

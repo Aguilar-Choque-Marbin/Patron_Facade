@@ -1,5 +1,6 @@
 // Fill out your copyright notice in the Description page of Project Settings.
 
+
 #include "FNiveles.h"
 
 #include "FabricaNavesAcuaticas.h"
@@ -8,15 +9,17 @@
 
 
 
+
 // Sets default values
 AFNiveles::AFNiveles()
 {
 	// Set this actor to call Tick() every frame.  You can turn this off to improve performance if you don't need it.
 	PrimaryActorTick.bCanEverTick = true;
+
+	PosEscuadronTerrestres = FVector(0.0f, -500.0f, 250.0f);
+	PosEscuadronAereas = FVector(300.0f, -500.0f, 400.0f);
+	PosEscuadronAcuaticas = FVector(600.0f, -500.0f, 550.0f);
 	
-	PosEscuadronAcuaticas = FVector(0.0f, -500.0f, 250.0f);
-	PosEscuadronAereas = FVector(300.0f, -500.0f, 250.0f);
-	PosEscuadronTerrestres = FVector(600.0f, -500.0f, 250.0f);
 }
 
 // Called when the game starts or when spawned
@@ -70,8 +73,8 @@ void AFNiveles::CrearEscuadronTerrestres()
 		PosEscuadronTerrestres.Y += 200.0f;
 		if (i == 4)
 		{
-			PosEscuadronAereas.X += 150.0f;
-			PosEscuadronAereas.Y = -500.0f;
+			PosEscuadronTerrestres.X += 150.0f;
+			PosEscuadronTerrestres.Y = -500.0f;
 		}
 		TANavesEnemigas.Push(NaveReabastecimiento);
 	}
@@ -83,11 +86,11 @@ void AFNiveles::CrearEscuadronAcuaticas()
 	{
 		ANaveEnemiga* NaveTransporte = FabricaAcuaticas->CreacionNaves("Transporte");
 		NaveTransporte->SetActorLocation(PosEscuadronAcuaticas);
-		PosEscuadronTerrestres.Y += 200.0f;
+		PosEscuadronAcuaticas.Y += 200.0f;
 		if (i == 4)
 		{
-			PosEscuadronAereas.X += 150.0f;
-			PosEscuadronAereas.Y = -500.0f;
+			PosEscuadronAcuaticas.X += 150.0f;
+			PosEscuadronAcuaticas.Y = -500.0f;
 		}
 		TANavesEnemigas.Push(NaveTransporte);
 	}
