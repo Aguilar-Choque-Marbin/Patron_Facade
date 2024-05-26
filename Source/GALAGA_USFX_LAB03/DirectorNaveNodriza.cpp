@@ -42,9 +42,7 @@ void ADirectorNaveNodriza::CrearNaveNodriza()
 void ADirectorNaveNodriza::CrearNaveNodriza2()
 {
 	GeneradorNaveNodriza->ConstruirNuevaNave(2); //Llamamos a los metodos de la clase IBuildNave
-	GeneradorNaveNodriza->ConstruirArmas(2); //Llamamos a los metodos de la clase IBuildNave
 	GeneradorNaveNodriza->ConstruirMotores(2); //Llamamos a los metodos de la clase IBuildNave
-	GeneradorNaveNodriza->ConstruirProyectiles(2); //Llamamos a los metodos de la clase IBuildNave
 	GEngine->AddOnScreenDebugMessage(-1, 15.f, FColor::Red, TEXT("Nave Nodriza2 Implementada")); //Mensaje en pantalla
 }
 

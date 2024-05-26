@@ -9,6 +9,9 @@ ANaveSpawn::ANaveSpawn()
  	// Set this actor to call Tick() every frame.  You can turn this off to improve performance if you don't need it.
 	PrimaryActorTick.bCanEverTick = true;
 
+	static ConstructorHelpers::FObjectFinder<UStaticMesh> ShipMesh(TEXT("StaticMesh'/Game/Geometry/Meshes/1M_Cube.1M_Cube'"));
+	MallaNave = CreateDefaultSubobject<UStaticMeshComponent>(TEXT("ShipMesh"));
+	MallaNave->SetStaticMesh(ShipMesh.Object);
 }
 
 // Called when the game starts or when spawned

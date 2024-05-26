@@ -5,6 +5,11 @@
 #include "CoreMinimal.h"
 #include "GameFramework/Actor.h"
 #include "FabricaNaves.h"
+
+#include "DirectorNaveNodriza.h"
+#include "BuildNaveNodrizaBasica.h"
+#include "BuildNaveNodrizaConcreto.h"
+
 #include "FNiveles.generated.h"
 
 UCLASS()
@@ -34,15 +39,21 @@ public:
 	AFabricaNaves* FabricaTerrestres;
 	AFabricaNaves* FabricaAcuaticas;
 
+	ADirectorNaveNodriza* DirectorNodriza;
+	ABuildNaveNodrizaBasica* NaveNodrizaBasica;
+	ABuildNaveNodrizaConcreto* NaveNodrizaConcreto;
+
 	TArray<ANaveEnemiga*> TANavesEnemigas;
 
 	FVector PosEscuadronAereas;
 	FVector PosEscuadronTerrestres;
 	FVector PosEscuadronAcuaticas;
 
-	void EstablecerFabricas();
+	void GenerarFabricas();
 	void CrearEscuadronAereas();
 	void CrearEscuadronTerrestres();
 	void CrearEscuadronAcuaticas();
+	void CrearNodrizaBasica();
+	void CrearNodrizaConcreto();
 
 };

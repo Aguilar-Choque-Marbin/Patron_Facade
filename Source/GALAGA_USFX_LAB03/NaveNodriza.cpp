@@ -36,7 +36,7 @@ void ANaveNodriza::NodrizaSpawn(int a)
 {
 	if (a == 1)
 	{
-		FVector PosicionNave = FVector(-71.0f, 8.0f, 419.0f);
+		FVector PosicionNave = FVector(-71.0f, 8.0f, 400.0f);
 		FRotator RotacionNave = FRotator(0.0f, 0.0f, 0.0f);
 		NaveSpawn = GetWorld()->SpawnActor<ANaveSpawn>(ANaveSpawn::StaticClass());
 		NaveSpawn->SetActorLocation(PosicionNave);
@@ -44,7 +44,7 @@ void ANaveNodriza::NodrizaSpawn(int a)
 	}
 	if (a == 2)
 	{
-		FVector PosicionNave1 = FVector(-471.0f, 8.0f, 419.0f);
+		FVector PosicionNave1 = FVector(-471.0f, 8.0f, 400.0f);
 		FRotator RotacionNave1 = FRotator(0.0f, 0.0f, 0.0f);
 		NaveSpawn = GetWorld()->SpawnActor<ANaveSpawn>(ANaveSpawn::StaticClass());
 		NaveSpawn->SetActorLocation(PosicionNave1);
@@ -56,7 +56,7 @@ void ANaveNodriza::NodrizaMotor(int b)
 {
 	if (b == 1)
 	{
-		FVector PosicionMotor = FVector(-77.0f, 0.0f, 300.0f);
+		FVector PosicionMotor = FVector(-77.0f, 0.0f, 350.0f);
 		FRotator RotacionMotor = FRotator(0.0f, 0.0f, 0.0f);
 		NaveMotor = GetWorld()->SpawnActor<AMotores>(AMotores::StaticClass());
 		NaveMotor->SetActorLocation(PosicionMotor);
@@ -64,7 +64,7 @@ void ANaveNodriza::NodrizaMotor(int b)
 	}
 	if (b == 2)
 	{
-		FVector PosicionMotor1 = FVector(-477.0f, 0.0f, 300.0f);
+		FVector PosicionMotor1 = FVector(-477.0f, 0.0f, 350.0f);
 		FRotator RotacionMotor1 = FRotator(0.0f, 0.0f, 0.0f);
 		NaveMotor = GetWorld()->SpawnActor<AMotores>(AMotores::StaticClass());
 		NaveMotor->SetActorLocation(PosicionMotor1);
@@ -101,7 +101,7 @@ void ANaveNodriza::NodrizaArma(int d)
 {
 	if (d == 1)
 	{
-		FVector PosicionArma = FVector(-105.0f, 0.0f, 600.0f);
+		FVector PosicionArma = FVector(-105.0f, 0.0f, 500.0f);
 		FRotator RotacionArma = FRotator(0.0f, 0.0f, 0.0f);
 		NaveArma = GetWorld()->SpawnActor<AArmaNave>(AArmaNave::StaticClass());
 		NaveArma->SetActorLocation(PosicionArma);
@@ -109,7 +109,7 @@ void ANaveNodriza::NodrizaArma(int d)
 	}
 	if (d == 2)
 	{
-		FVector PosicionArma1 = FVector(-405.0f, 0.0f, 600.0f);
+		FVector PosicionArma1 = FVector(-405.0f, 0.0f, 500.0f);
 		FRotator RotacionArma1 = FRotator(0.0f, 0.0f, 0.0f);
 		NaveArma = GetWorld()->SpawnActor<AArmaNave>(AArmaNave::StaticClass());
 		NaveArma->SetActorLocation(PosicionArma1);

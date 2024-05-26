@@ -36,15 +36,22 @@ void AFNiveles::Tick(float DeltaTime)
 
 }
 
-void AFNiveles::EstablecerFabricas()
+void AFNiveles::GenerarFabricas()
 {
 	FabricaAereas = GetWorld()->SpawnActor<AFabricaNavesAereas>(AFabricaNavesAereas::StaticClass());
 	FabricaTerrestres = GetWorld()->SpawnActor<AFabricaNavesTerrestres>(AFabricaNavesTerrestres::StaticClass());
 	FabricaAcuaticas = GetWorld()->SpawnActor<AFabricaNavesAcuaticas>(AFabricaNavesAcuaticas::StaticClass());
-
 	if (FabricaAereas && FabricaTerrestres && FabricaAcuaticas)
 	{
-		GEngine->AddOnScreenDebugMessage(-1, 15.f, FColor::Blue, TEXT("Fabrica Implementadas"));
+		GEngine->AddOnScreenDebugMessage(-1, 15.f, FColor::Blue, TEXT("Fabrica Creadas"));
+	}
+
+	DirectorNodriza = GetWorld()->SpawnActor<ADirectorNaveNodriza>(ADirectorNaveNodriza::StaticClass());
+	NaveNodrizaBasica = GetWorld()->SpawnActor<ABuildNaveNodrizaBasica>(ABuildNaveNodrizaBasica::StaticClass());
+	NaveNodrizaConcreto = GetWorld()->SpawnActor<ABuildNaveNodrizaConcreto>(ABuildNaveNodrizaConcreto::StaticClass());
+	if (DirectorNodriza && NaveNodrizaBasica && NaveNodrizaConcreto)
+	{
+		GEngine->AddOnScreenDebugMessage(-1, 15.f, FColor::Blue, TEXT("Nodriza Implementadas"));
 	}
 }
 
@@ -94,6 +101,18 @@ void AFNiveles::CrearEscuadronAcuaticas()
 		}
 		TANavesEnemigas.Push(NaveTransporte);
 	}
+}
+
+void AFNiveles::CrearNodrizaBasica()
+{
+	DirectorNodriza->OrdenarConstruccionNaveNodriza(NaveNodrizaBasica);
+	DirectorNodriza->CrearNaveNodriza2();
+}
+
+void AFNiveles::CrearNodrizaConcreto()
+{
+	DirectorNodriza->OrdenarConstruccionNaveNodriza(NaveNodrizaConcreto);
+	DirectorNodriza->CrearNaveNodriza();
 }
 
 //void AFNiveles::CrearNodriza()

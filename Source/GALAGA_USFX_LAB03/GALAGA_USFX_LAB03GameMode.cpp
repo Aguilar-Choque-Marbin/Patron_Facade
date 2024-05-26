@@ -33,10 +33,12 @@ void AGALAGA_USFX_LAB03GameMode::BeginPlay()
 	Super::BeginPlay();
 
 	Nivel = GetWorld()->SpawnActor<AFNiveles>(AFNiveles::StaticClass());
-	Nivel->EstablecerFabricas();
+	Nivel->GenerarFabricas();
 	Nivel->CrearEscuadronAereas();
 	Nivel->CrearEscuadronTerrestres();
 	Nivel->CrearEscuadronAcuaticas();
+	Nivel->CrearNodrizaBasica();
+	Nivel->CrearNodrizaConcreto();
 }
 /*void AGALAGA_USFX_LAB03GameMode::BeginPlay()
 {
