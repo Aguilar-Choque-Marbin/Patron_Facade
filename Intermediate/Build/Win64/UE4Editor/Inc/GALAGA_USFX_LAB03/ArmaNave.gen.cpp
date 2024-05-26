@@ -52,7 +52,7 @@ void EmptyLinkFunctionForGeneratedCodeArmaNave() {}
 #endif
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AArmaNave_Statics::NewProp_MallaArmaNave_MetaData[] = {
-		{ "Category", "AemaNave" },
+		{ "Category", "ArmaNave" },
 		{ "EditInline", "true" },
 		{ "ModuleRelativePath", "ArmaNave.h" },
 	};
@@ -88,7 +88,7 @@ void EmptyLinkFunctionForGeneratedCodeArmaNave() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(AArmaNave, 4160293740);
+	IMPLEMENT_CLASS(AArmaNave, 3265553597);
 	template<> GALAGA_USFX_LAB03_API UClass* StaticClass<AArmaNave>()
 	{
 		return AArmaNave::StaticClass();

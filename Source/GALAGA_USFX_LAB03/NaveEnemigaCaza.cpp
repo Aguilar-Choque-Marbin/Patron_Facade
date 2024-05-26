@@ -31,6 +31,6 @@ void ANaveEnemigaCaza::Tick(float DeltaTime)
 {
 	Super::Tick(DeltaTime);
 
-	Mover(DeltaTime);
+	//Mover(DeltaTime);
 
 }

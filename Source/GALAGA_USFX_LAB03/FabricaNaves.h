@@ -3,8 +3,8 @@
 #pragma once
 
 #include "CoreMinimal.h"
-#include "NaveEnemiga.h"
 #include "GameFramework/Actor.h"
+#include "NaveEnemiga.h"
 #include "FabricaNaves.generated.h"
 
 UCLASS()
@@ -25,6 +25,6 @@ public:
 	virtual void Tick(float DeltaTime) override;
 
 	ANaveEnemiga* GenerarNave(FString Tipo);
-	virtual ANaveEnemiga* CreacionNaves(FString tipoNave) PURE_VIRTUAL(AFabricaNaves::CreacionNaves, return nullptr;);
+	virtual ANaveEnemiga* CreacionNave(FString Nave) PURE_VIRTUAL(AFabricaNaves::CreacionNave, return nullptr;);
 
 };

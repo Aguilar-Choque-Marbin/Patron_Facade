@@ -6,11 +6,11 @@
 #include "NaveEnemigaTransporte.h"
 
 
-ANaveEnemiga* AFabricaNavesAcuaticas::CreacionNaves(FString tipoNave)
+ANaveEnemiga* AFabricaNavesAcuaticas::CreacionNave(FString Nave)
 {
-	if (tipoNave.Equals("Transporte"))
+	if (Nave.Equals("Transporte"))
 	{
 		return GetWorld()->SpawnActor<ANaveEnemigaTransporte>(ANaveEnemigaTransporte::StaticClass());
 	}
-	return nullptr;
+	else return nullptr;
 }

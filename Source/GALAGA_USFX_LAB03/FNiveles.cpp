@@ -17,8 +17,8 @@ AFNiveles::AFNiveles()
 	PrimaryActorTick.bCanEverTick = true;
 
 	PosEscuadronTerrestres = FVector(0.0f, -500.0f, 250.0f);
-	PosEscuadronAereas = FVector(300.0f, -500.0f, 400.0f);
-	PosEscuadronAcuaticas = FVector(600.0f, -500.0f, 550.0f);
+	PosEscuadronAereas = FVector(300.0f, -500.0f, 250.0f);
+	PosEscuadronAcuaticas = FVector(600.0f, -500.0f, 250.0f);
 	
 }
 
@@ -52,7 +52,7 @@ void AFNiveles::CrearEscuadronAereas()
 {
 	for (int i = 0; i < 10; i++)
 	{
-		ANaveEnemiga* NaveCaza = FabricaAereas->CreacionNaves("Caza");
+		ANaveEnemiga* NaveCaza = FabricaAereas->GenerarNave("Caza");
 		NaveCaza->SetActorLocation(PosEscuadronAereas);
 		PosEscuadronAereas.Y += 200.0f;
 		if (i == 4)
@@ -68,7 +68,7 @@ void AFNiveles::CrearEscuadronTerrestres()
 {
 	for (int i = 0; i < 10; i++)
 	{
-		ANaveEnemiga* NaveReabastecimiento = FabricaTerrestres->CreacionNaves("Reabastecimiento");
+		ANaveEnemiga* NaveReabastecimiento = FabricaTerrestres->GenerarNave("Reabastecimiento");
 		NaveReabastecimiento->SetActorLocation(PosEscuadronTerrestres);
 		PosEscuadronTerrestres.Y += 200.0f;
 		if (i == 4)
@@ -84,7 +84,7 @@ void AFNiveles::CrearEscuadronAcuaticas()
 {
 	for (int i = 0; i < 10; i++)
 	{
-		ANaveEnemiga* NaveTransporte = FabricaAcuaticas->CreacionNaves("Transporte");
+		ANaveEnemiga* NaveTransporte = FabricaAcuaticas->GenerarNave("Transporte");
 		NaveTransporte->SetActorLocation(PosEscuadronAcuaticas);
 		PosEscuadronAcuaticas.Y += 200.0f;
 		if (i == 4)

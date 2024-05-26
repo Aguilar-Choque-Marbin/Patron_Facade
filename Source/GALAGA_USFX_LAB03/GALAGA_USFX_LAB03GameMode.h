@@ -12,6 +12,8 @@ class ANaveEnemigaEspia;
 class ANaveEnemigaReabastecimiento;
 class ANaveEnemigaTransporte;
 
+class AFNiveles;
+
 UCLASS(MinimalAPI)
 class AGALAGA_USFX_LAB03GameMode : public AGameModeBase
 {
@@ -46,7 +48,7 @@ public:
 	//class ABuildNaveNodrizaConcreto* NaveNodrizaConcreto;
 	//class ABuildNaveNodrizaBasica* NaveNodrizaBasica;
 
-	class AFNiveles* Niveles;
+	AFNiveles* Nivel;
 };
 
 

@@ -4,12 +4,12 @@
 #include "FabricaNavesAereas.h"
 
 #include "NaveEnemigaCaza.h"
-#include "NaveEnemigaEspia.h"
+//#include "NaveEnemigaEspia.h"
 
 
-ANaveEnemiga* AFabricaNavesAereas::CreacionNaves(FString tipoNave)
+ANaveEnemiga* AFabricaNavesAereas::CreacionNave(FString Nave)
 {
-	if (tipoNave.Equals("Caza"))
+	if (Nave.Equals("Caza"))
 	{
 		return GetWorld()->SpawnActor<ANaveEnemigaCaza>(ANaveEnemigaCaza::StaticClass());
 	}
@@ -17,5 +17,5 @@ ANaveEnemiga* AFabricaNavesAereas::CreacionNaves(FString tipoNave)
 	//{
 	//	return GetWorld()->SpawnActor<ANaveEnemigaEspia>(ANaveEnemigaEspia::StaticClass());
 	//}
-	return nullptr;
+	else return nullptr;
 }
