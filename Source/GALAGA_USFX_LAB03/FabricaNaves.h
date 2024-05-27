@@ -24,7 +24,7 @@ public:
 	// Called every frame
 	virtual void Tick(float DeltaTime) override;
 
-	ANaveEnemiga* GenerarNave(FString Tipo);
-	virtual ANaveEnemiga* CreacionNave(FString Nave) PURE_VIRTUAL(AFabricaNaves::CreacionNave, return nullptr;);
+	//ANaveEnemiga* GenerarNave(FString Tipo);
+	//virtual ANaveEnemiga* CreacionNave(FString Nave) PURE_VIRTUAL(AFabricaNaves::CreacionNave, return nullptr;);
 
 };

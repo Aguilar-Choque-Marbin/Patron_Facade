@@ -14,6 +14,6 @@ class GALAGA_USFX_LAB03_API AFabricaNavesAcuaticas : public AFabricaNaves
 {
 	GENERATED_BODY()
 public:
-	virtual ANaveEnemiga* CreacionNave(FString Nave) override;
+	//virtual ANaveEnemiga* CreacionNave(FString Nave) override;
 
 };

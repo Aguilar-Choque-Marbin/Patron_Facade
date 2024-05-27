@@ -15,8 +15,8 @@ public:
 	// Sets default values for this actor's properties
 	AArmaNave();
 
-	UPROPERTY(VisibleAnyWhere, BlueprintReadOnly, Category = "ArmaNave")
-	UStaticMeshComponent* MallaArmaNave;
+	//UPROPERTY(VisibleAnyWhere, BlueprintReadOnly, Category = ArmaNave)
+	//UStaticMeshComponent* MallaArmaNave;
 
 protected:
 	// Called when the game starts or when spawned

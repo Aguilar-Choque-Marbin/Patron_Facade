@@ -5,7 +5,6 @@
 #include "CoreMinimal.h"
 
 #include "INaveNodriza.h"
-#include "GALAGA_USFX_LAB03Projectile.h"
 
 #include "GameFramework/Actor.h"
 #include "NaveNodriza.generated.h"
@@ -27,17 +26,17 @@ public:
 	// Called every frame
 	virtual void Tick(float DeltaTime) override;
 
-private:
-	class AMotores* NaveMotor;
-	class AArmaNave* NaveArma;
-	class ANaveSpawn* NaveSpawn;
-	class AGALAGA_USFX_LAB03Projectile* NaveProyectil;
+public:
+	//class AMotores* Motor;
+	//class AArmaNave* Arma;
+	//class ANaveSpawn* Spawn;
+	//class AGALAGA_USFX_LAB03Projectile* Proyectil;
 
 public:
-	void NodrizaSpawn(int a) override;
-	void NodrizaMotor(int b) override;
-	void NodrizaProyectil(int c) override;
-	void NodrizaArma(int d) override;
+	//void NodrizaSpawn(int a) override;
+	//void NodrizaMotor(int b) override;
+	//void NodrizaProyectil(int c) override;
+	//void NodrizaArma(int d) override;
 
 	float TiempoDeDisparo;
 	float Intervalo;

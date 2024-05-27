@@ -7,8 +7,7 @@
 #include "FabricaNaves.h"
 
 #include "DirectorNaveNodriza.h"
-#include "BuildNaveNodrizaBasica.h"
-#include "BuildNaveNodrizaConcreto.h"
+#include "IBuildNave.h"
 
 #include "FNiveles.generated.h"
 
@@ -30,30 +29,26 @@ public:
 	virtual void Tick(float DeltaTime) override;
 
 public:
-	//void CrearNodriza();
-	//void CrearObstaculos();
-	//void CrearNaveEnemigas();
-	//void MovimientoNaves();
 
-	AFabricaNaves* FabricaAereas;
-	AFabricaNaves* FabricaTerrestres;
-	AFabricaNaves* FabricaAcuaticas;
+	//AFabricaNaves* FabricaAereas;
+	//AFabricaNaves* FabricaTerrestres;
+	//AFabricaNaves* FabricaAcuaticas;
 
-	ADirectorNaveNodriza* DirectorNodriza;
-	ABuildNaveNodrizaBasica* NaveNodrizaBasica;
-	ABuildNaveNodrizaConcreto* NaveNodrizaConcreto;
+	//ADirectorNaveNodriza* DirectorNodriza;
+	//IIBuildNave* NaveNodrizaBasica;
+	//IIBuildNave* NaveNodrizaConcreto;
 
-	TArray<ANaveEnemiga*> TANavesEnemigas;
+	//TArray<ANaveEnemiga*> TANavesEnemigas;
 
-	FVector PosEscuadronAereas;
-	FVector PosEscuadronTerrestres;
-	FVector PosEscuadronAcuaticas;
+	//FVector PosEscuadronAereas;
+	//FVector PosEscuadronTerrestres;
+	//FVector PosEscuadronAcuaticas;
 
-	void GenerarFabricas();
-	void CrearEscuadronAereas();
-	void CrearEscuadronTerrestres();
-	void CrearEscuadronAcuaticas();
-	void CrearNodrizaBasica();
-	void CrearNodrizaConcreto();
+	//void GenerarFabricas();
+	//void CrearEscuadronAereas();
+	//void CrearEscuadronTerrestres();
+	//void CrearEscuadronAcuaticas();
+	//void CrearNodrizaBasica();
+	//void CrearNodrizaConcreto();
 
 };

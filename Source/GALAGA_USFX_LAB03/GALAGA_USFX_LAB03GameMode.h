@@ -4,15 +4,17 @@
 
 #include "CoreMinimal.h"
 #include "GameFramework/GameModeBase.h"
+#include "FNiveles.h"
 #include "GALAGA_USFX_LAB03GameMode.generated.h"
 
-class ANaveEnemiga;
-class ANaveEnemigaCaza;
-class ANaveEnemigaEspia;
-class ANaveEnemigaReabastecimiento;
-class ANaveEnemigaTransporte;
+//class ANaveEnemiga;
+//class ANaveEnemigaCaza;
+//class ANaveEnemigaEspia;
+//class ANaveEnemigaReabastecimiento;
+//class ANaveEnemigaTransporte;
 
-class AFNiveles;
+class ASubscriptor1;
+class ASubscriptor2;
 
 UCLASS(MinimalAPI)
 class AGALAGA_USFX_LAB03GameMode : public AGameModeBase
@@ -28,11 +30,11 @@ protected:
 public:
 	virtual void Tick(float DeltaTime) override;
 
-public:
-	ANaveEnemigaCaza* NaveEnemigaCaza;
-	ANaveEnemigaEspia* NaveEnemigaEspia;
-	ANaveEnemigaReabastecimiento* NaveEnemigaReabastecimiento;
-	ANaveEnemigaTransporte* NaveEnemigaTransporte;
+//public:
+	//ANaveEnemigaCaza* NaveEnemigaCaza;
+	//ANaveEnemigaEspia* NaveEnemigaEspia;
+	//ANaveEnemigaReabastecimiento* NaveEnemigaReabastecimiento;
+	//ANaveEnemigaTransporte* NaveEnemigaTransporte;
 
 //public:
 //	TArray<ANaveEnemiga*> TANavesEnemigas;
@@ -48,7 +50,22 @@ public:
 	//class ABuildNaveNodrizaConcreto* NaveNodrizaConcreto;
 	//class ABuildNaveNodrizaBasica* NaveNodrizaBasica;
 
-	AFNiveles* Nivel;
+	//AFNiveles* Nivel;
+
+protected:
+	class AReloj* Reloj;
+	class ASubscriptor1* NaveSubscriptor1;
+	class ASubscriptor2* NaveSubscriptor2;
+
+public:
+	TArray<ASubscriptor1*> NavesSub1;
+	TArray<ASubscriptor2*> NavesSub2;
+
+	float TimeDay;
+
+	FVector PosicionNaveSub1;
+	FVector PosicionNaveSub2;
+
 };
 
 

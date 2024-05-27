@@ -15,8 +15,8 @@ public:
 	// Sets default values for this actor's properties
 	AMotores();
 
-	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = "MotorNave")
-	UStaticMeshComponent* MallaMotorNave;
+	//UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = MotorNave)
+	//UStaticMeshComponent* MallaMotorNave;
 
 protected:
 	// Called when the game starts or when spawned

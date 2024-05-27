@@ -7,15 +7,15 @@
 //#include "NaveEnemigaEspia.h"
 
 
-ANaveEnemiga* AFabricaNavesAereas::CreacionNave(FString Nave)
-{
-	if (Nave.Equals("Caza"))
-	{
-		return GetWorld()->SpawnActor<ANaveEnemigaCaza>(ANaveEnemigaCaza::StaticClass());
-	}
-	//if (tipoNave == "Espia")
-	//{
-	//	return GetWorld()->SpawnActor<ANaveEnemigaEspia>(ANaveEnemigaEspia::StaticClass());
-	//}
-	else return nullptr;
-}
+//ANaveEnemiga* AFabricaNavesAereas::CreacionNave(FString Nave)
+//{
+//	if (Nave.Equals("Caza"))
+//	{
+//		return GetWorld()->SpawnActor<ANaveEnemigaCaza>(ANaveEnemigaCaza::StaticClass());
+//	}
+//	//if (tipoNave == "Espia")
+//	//{
+//	//	return GetWorld()->SpawnActor<ANaveEnemigaEspia>(ANaveEnemigaEspia::StaticClass());
+//	//}
+//	else return nullptr;
+//}

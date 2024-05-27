@@ -23,10 +23,10 @@ class GALAGA_USFX_LAB03_API IIBuildNave
 
 	// Add interface functions to this class. This is the class that will be inherited to implement this interface.
 public:
-	virtual void ConstruirNuevaNave(int y) = 0;
-	virtual void ConstruirArmas(int u) = 0;
-	virtual void ConstruirMotores(int i) = 0;
-	virtual void ConstruirProyectiles(int o) = 0;
+	//virtual void ConstruirNuevaNave(int y) = 0;
+	//virtual void ConstruirArmas(int u) = 0;
+	//virtual void ConstruirMotores(int i) = 0;
+	//virtual void ConstruirProyectiles(int o) = 0;
 
-	virtual class ANaveNodriza* NaveNodriza() = 0;
+	//virtual class ANaveNodriza* NaveNodriza() = 0;
 };

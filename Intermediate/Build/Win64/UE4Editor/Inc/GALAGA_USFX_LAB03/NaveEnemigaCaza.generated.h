@@ -8,14 +8,26 @@
 #include "UObject/ScriptMacros.h"
 
 PRAGMA_DISABLE_DEPRECATION_WARNINGS
+class UPrimitiveComponent;
+class AActor;
+struct FVector;
+struct FHitResult;
 #ifdef GALAGA_USFX_LAB03_NaveEnemigaCaza_generated_h
 #error "NaveEnemigaCaza.generated.h already included, missing '#pragma once' in NaveEnemigaCaza.h"
 #endif
 #define GALAGA_USFX_LAB03_NaveEnemigaCaza_generated_h
 
 #define GALAGA_USFX_LAB03_Source_GALAGA_USFX_LAB03_NaveEnemigaCaza_h_15_SPARSE_DATA
-#define GALAGA_USFX_LAB03_Source_GALAGA_USFX_LAB03_NaveEnemigaCaza_h_15_RPC_WRAPPERS
-#define GALAGA_USFX_LAB03_Source_GALAGA_USFX_LAB03_NaveEnemigaCaza_h_15_RPC_WRAPPERS_NO_PURE_DECLS
+#define GALAGA_USFX_LAB03_Source_GALAGA_USFX_LAB03_NaveEnemigaCaza_h_15_RPC_WRAPPERS \
+ \
+	DECLARE_FUNCTION(execOnHit);
+
+
+#define GALAGA_USFX_LAB03_Source_GALAGA_USFX_LAB03_NaveEnemigaCaza_h_15_RPC_WRAPPERS_NO_PURE_DECLS \
+ \
+	DECLARE_FUNCTION(execOnHit);
+
+
 #define GALAGA_USFX_LAB03_Source_GALAGA_USFX_LAB03_NaveEnemigaCaza_h_15_INCLASS_NO_PURE_DECLS \
 private: \
 	static void StaticRegisterNativesANaveEnemigaCaza(); \

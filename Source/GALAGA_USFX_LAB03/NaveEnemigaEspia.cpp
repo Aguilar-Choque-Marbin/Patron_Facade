@@ -8,14 +8,26 @@ ANaveEnemigaEspia::ANaveEnemigaEspia()
 	static ConstructorHelpers::FObjectFinder<UStaticMesh>ShipMesh(TEXT("StaticMesh'/Game/StarterContent/Shapes/Shape_Cube.Shape_Cube'"));
 
 	mallaNaveEnemiga->SetStaticMesh(ShipMesh.Object);
-
+	//mallaNaveEnemiga->BodyInstance.SetCollisionProfileName("NaveEspia");
+	mallaNaveEnemiga->SetCollisionProfileName(TEXT("NaveEspia"));
+	mallaNaveEnemiga->OnComponentHit.AddDynamic(this, &ANaveEnemigaEspia::OnHit);
 	PosicionInicialX = -700.0f;
 }
 
 void ANaveEnemigaEspia::Tick(float DeltaTime)
 {
 	Super::Tick(DeltaTime);
-	//Mover(DeltaTime);
+	Mover(DeltaTime);
+}
+
+void ANaveEnemigaEspia::OnHit(UPrimitiveComponent* HitComp, AActor* OtherActor, UPrimitiveComponent* OtherComp, FVector NormalImpulse, const FHitResult& Hit)
+{
+	if ((OtherActor != NULL) && (OtherActor != this) && (OtherComp != NULL))
+	{
+		OtherComp->AddImpulseAtLocation(GetVelocity() * 100.0f, GetActorLocation());
+
+	}
+	Destroy();
 }
 
 void ANaveEnemigaEspia::Mover(float DeltaTime)
