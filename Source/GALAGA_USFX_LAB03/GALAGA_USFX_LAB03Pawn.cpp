@@ -20,6 +20,9 @@ const FName AGALAGA_USFX_LAB03Pawn::FireRightBinding("FireRight");
 
 AGALAGA_USFX_LAB03Pawn::AGALAGA_USFX_LAB03Pawn()
 {	
+
+	//MovimientoNavePawn = CreateDefaultSubobject<UMovimientoNodriza>(TEXT("MovimientoNaves"));
+
 	static ConstructorHelpers::FObjectFinder<UStaticMesh> ShipMesh(TEXT("/Game/TwinStick/Meshes/TwinStickUFO.TwinStickUFO"));
 	// Create the mesh component
 	ShipMeshComponent = CreateDefaultSubobject<UStaticMeshComponent>(TEXT("ShipMesh"));

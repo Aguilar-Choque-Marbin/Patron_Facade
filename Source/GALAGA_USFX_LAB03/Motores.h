@@ -4,6 +4,7 @@
 
 #include "CoreMinimal.h"
 #include "GameFramework/Actor.h"
+#include "MovimientoNaves.h"
 #include "Motores.generated.h"
 
 UCLASS()
@@ -15,8 +16,10 @@ public:
 	// Sets default values for this actor's properties
 	AMotores();
 
-	//UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = MotorNave)
-	//UStaticMeshComponent* MallaMotorNave;
+	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = MotorNave)
+	UStaticMeshComponent* MallaMotorNave;
+
+	UMovimientoNaves* MovimientoNave;
 
 protected:
 	// Called when the game starts or when spawned

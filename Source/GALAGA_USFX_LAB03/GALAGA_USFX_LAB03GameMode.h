@@ -13,8 +13,8 @@
 //class ANaveEnemigaReabastecimiento;
 //class ANaveEnemigaTransporte;
 
-class ASubscriptor1;
-class ASubscriptor2;
+//class ASubscriptor1;
+//class ASubscriptor2;
 
 UCLASS(MinimalAPI)
 class AGALAGA_USFX_LAB03GameMode : public AGameModeBase
@@ -50,7 +50,7 @@ public:
 	//class ABuildNaveNodrizaConcreto* NaveNodrizaConcreto;
 	//class ABuildNaveNodrizaBasica* NaveNodrizaBasica;
 
-	//AFNiveles* Nivel;
+	AFNiveles* Nivel;
 
 protected:
 	class AReloj* Reloj;
@@ -62,6 +62,9 @@ public:
 	TArray<ASubscriptor2*> NavesSub2;
 
 	float TimeDay;
+	int V;
+	float State;
+	int Estado;
 
 	FVector PosicionNaveSub1;
 	FVector PosicionNaveSub2;

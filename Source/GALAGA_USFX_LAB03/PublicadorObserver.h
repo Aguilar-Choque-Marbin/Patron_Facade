@@ -27,7 +27,7 @@ private:
 	UPROPERTY(VisibleAnywhere, Category= "Publicador Observer")
 	TArray<AActor*>Subscriptores;
 
-	class IISubscriptor* Subscriptor;
+	class IISubscriptor* ISubscriptor;
 
 public:
 

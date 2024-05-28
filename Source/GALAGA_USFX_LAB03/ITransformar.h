@@ -23,12 +23,10 @@ class GALAGA_USFX_LAB03_API IITransformar
 	// Add interface functions to this class. This is the class that will be inherited to implement this interface.
 public:
 	virtual void TransformarSubscriptor() = 0;
-	//virtual void MejorarSubscriptor() = 0;
-	//virtual void ActivarArma() = 0;
-	//virtual void ActivarArmamento() = 0;
-	//virtual void MejoraArmamento(float DeltaTime) = 0;
-	//virtual void ActivarSuperVelocidad() = 0;
-	//virtual void MejorarSuperVelocidad() = 0;
-	//virtual void ActivarEscudo() = 0;
-	//virtual void MejorarImplementarEscudo() = 0;
+	virtual void ActivarArmamento() = 0;
+	virtual void MejoraArmamento(float DeltaTime) = 0;
+	virtual void ActivarSuperVelocidad() = 0;
+	virtual void MejorarSuperVelocidad() = 0;
+	virtual void ActivarEscudo() = 0;
+	virtual void MejorarImplementarEscudo() = 0;
 };

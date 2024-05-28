@@ -13,10 +13,10 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 #endif
 #define GALAGA_USFX_LAB03_Subscriptor1_generated_h
 
-#define GALAGA_USFX_LAB03_Source_GALAGA_USFX_LAB03_Subscriptor1_h_14_SPARSE_DATA
-#define GALAGA_USFX_LAB03_Source_GALAGA_USFX_LAB03_Subscriptor1_h_14_RPC_WRAPPERS
-#define GALAGA_USFX_LAB03_Source_GALAGA_USFX_LAB03_Subscriptor1_h_14_RPC_WRAPPERS_NO_PURE_DECLS
-#define GALAGA_USFX_LAB03_Source_GALAGA_USFX_LAB03_Subscriptor1_h_14_INCLASS_NO_PURE_DECLS \
+#define GALAGA_USFX_LAB03_Source_GALAGA_USFX_LAB03_Subscriptor1_h_17_SPARSE_DATA
+#define GALAGA_USFX_LAB03_Source_GALAGA_USFX_LAB03_Subscriptor1_h_17_RPC_WRAPPERS
+#define GALAGA_USFX_LAB03_Source_GALAGA_USFX_LAB03_Subscriptor1_h_17_RPC_WRAPPERS_NO_PURE_DECLS
+#define GALAGA_USFX_LAB03_Source_GALAGA_USFX_LAB03_Subscriptor1_h_17_INCLASS_NO_PURE_DECLS \
 private: \
 	static void StaticRegisterNativesASubscriptor1(); \
 	friend struct Z_Construct_UClass_ASubscriptor1_Statics; \
@@ -26,7 +26,7 @@ public: \
 	virtual UObject* _getUObject() const override { return const_cast<ASubscriptor1*>(this); }
 
 
-#define GALAGA_USFX_LAB03_Source_GALAGA_USFX_LAB03_Subscriptor1_h_14_INCLASS \
+#define GALAGA_USFX_LAB03_Source_GALAGA_USFX_LAB03_Subscriptor1_h_17_INCLASS \
 private: \
 	static void StaticRegisterNativesASubscriptor1(); \
 	friend struct Z_Construct_UClass_ASubscriptor1_Statics; \
@@ -36,7 +36,7 @@ public: \
 	virtual UObject* _getUObject() const override { return const_cast<ASubscriptor1*>(this); }
 
 
-#define GALAGA_USFX_LAB03_Source_GALAGA_USFX_LAB03_Subscriptor1_h_14_STANDARD_CONSTRUCTORS \
+#define GALAGA_USFX_LAB03_Source_GALAGA_USFX_LAB03_Subscriptor1_h_17_STANDARD_CONSTRUCTORS \
 	/** Standard constructor, called after all reflected properties have been initialized */ \
 	NO_API ASubscriptor1(const FObjectInitializer& ObjectInitializer); \
 	DEFINE_DEFAULT_OBJECT_INITIALIZER_CONSTRUCTOR_CALL(ASubscriptor1) \
@@ -49,7 +49,7 @@ private: \
 public:
 
 
-#define GALAGA_USFX_LAB03_Source_GALAGA_USFX_LAB03_Subscriptor1_h_14_ENHANCED_CONSTRUCTORS \
+#define GALAGA_USFX_LAB03_Source_GALAGA_USFX_LAB03_Subscriptor1_h_17_ENHANCED_CONSTRUCTORS \
 private: \
 	/** Private move- and copy-constructors, should never be used */ \
 	NO_API ASubscriptor1(ASubscriptor1&&); \
@@ -60,31 +60,31 @@ public: \
 	DEFINE_DEFAULT_CONSTRUCTOR_CALL(ASubscriptor1)
 
 
-#define GALAGA_USFX_LAB03_Source_GALAGA_USFX_LAB03_Subscriptor1_h_14_PRIVATE_PROPERTY_OFFSET \
+#define GALAGA_USFX_LAB03_Source_GALAGA_USFX_LAB03_Subscriptor1_h_17_PRIVATE_PROPERTY_OFFSET \
 	FORCEINLINE static uint32 __PPO__Reloj() { return STRUCT_OFFSET(ASubscriptor1, Reloj); }
 
 
-#define GALAGA_USFX_LAB03_Source_GALAGA_USFX_LAB03_Subscriptor1_h_11_PROLOG
-#define GALAGA_USFX_LAB03_Source_GALAGA_USFX_LAB03_Subscriptor1_h_14_GENERATED_BODY_LEGACY \
+#define GALAGA_USFX_LAB03_Source_GALAGA_USFX_LAB03_Subscriptor1_h_14_PROLOG
+#define GALAGA_USFX_LAB03_Source_GALAGA_USFX_LAB03_Subscriptor1_h_17_GENERATED_BODY_LEGACY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
-	GALAGA_USFX_LAB03_Source_GALAGA_USFX_LAB03_Subscriptor1_h_14_PRIVATE_PROPERTY_OFFSET \
-	GALAGA_USFX_LAB03_Source_GALAGA_USFX_LAB03_Subscriptor1_h_14_SPARSE_DATA \
-	GALAGA_USFX_LAB03_Source_GALAGA_USFX_LAB03_Subscriptor1_h_14_RPC_WRAPPERS \
-	GALAGA_USFX_LAB03_Source_GALAGA_USFX_LAB03_Subscriptor1_h_14_INCLASS \
-	GALAGA_USFX_LAB03_Source_GALAGA_USFX_LAB03_Subscriptor1_h_14_STANDARD_CONSTRUCTORS \
+	GALAGA_USFX_LAB03_Source_GALAGA_USFX_LAB03_Subscriptor1_h_17_PRIVATE_PROPERTY_OFFSET \
+	GALAGA_USFX_LAB03_Source_GALAGA_USFX_LAB03_Subscriptor1_h_17_SPARSE_DATA \
+	GALAGA_USFX_LAB03_Source_GALAGA_USFX_LAB03_Subscriptor1_h_17_RPC_WRAPPERS \
+	GALAGA_USFX_LAB03_Source_GALAGA_USFX_LAB03_Subscriptor1_h_17_INCLASS \
+	GALAGA_USFX_LAB03_Source_GALAGA_USFX_LAB03_Subscriptor1_h_17_STANDARD_CONSTRUCTORS \
 public: \
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 
 
-#define GALAGA_USFX_LAB03_Source_GALAGA_USFX_LAB03_Subscriptor1_h_14_GENERATED_BODY \
+#define GALAGA_USFX_LAB03_Source_GALAGA_USFX_LAB03_Subscriptor1_h_17_GENERATED_BODY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
-	GALAGA_USFX_LAB03_Source_GALAGA_USFX_LAB03_Subscriptor1_h_14_PRIVATE_PROPERTY_OFFSET \
-	GALAGA_USFX_LAB03_Source_GALAGA_USFX_LAB03_Subscriptor1_h_14_SPARSE_DATA \
-	GALAGA_USFX_LAB03_Source_GALAGA_USFX_LAB03_Subscriptor1_h_14_RPC_WRAPPERS_NO_PURE_DECLS \
-	GALAGA_USFX_LAB03_Source_GALAGA_USFX_LAB03_Subscriptor1_h_14_INCLASS_NO_PURE_DECLS \
-	GALAGA_USFX_LAB03_Source_GALAGA_USFX_LAB03_Subscriptor1_h_14_ENHANCED_CONSTRUCTORS \
+	GALAGA_USFX_LAB03_Source_GALAGA_USFX_LAB03_Subscriptor1_h_17_PRIVATE_PROPERTY_OFFSET \
+	GALAGA_USFX_LAB03_Source_GALAGA_USFX_LAB03_Subscriptor1_h_17_SPARSE_DATA \
+	GALAGA_USFX_LAB03_Source_GALAGA_USFX_LAB03_Subscriptor1_h_17_RPC_WRAPPERS_NO_PURE_DECLS \
+	GALAGA_USFX_LAB03_Source_GALAGA_USFX_LAB03_Subscriptor1_h_17_INCLASS_NO_PURE_DECLS \
+	GALAGA_USFX_LAB03_Source_GALAGA_USFX_LAB03_Subscriptor1_h_17_ENHANCED_CONSTRUCTORS \
 private: \
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 

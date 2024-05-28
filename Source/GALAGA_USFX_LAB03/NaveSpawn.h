@@ -4,6 +4,7 @@
 
 #include "CoreMinimal.h"
 #include "GameFramework/Actor.h"
+#include "MovimientoNaves.h"
 #include "NaveSpawn.generated.h"
 
 UCLASS()
@@ -15,8 +16,10 @@ public:
 	// Sets default values for this actor's properties
 	ANaveSpawn();
 
-	//UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = SpawnNave)
-	//UStaticMeshComponent* MallaNave;
+	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = SpawnNave)
+	UStaticMeshComponent* MallaNave;
+
+	UMovimientoNaves* MovimientoNave;
 
 protected:
 	// Called when the game starts or when spawned

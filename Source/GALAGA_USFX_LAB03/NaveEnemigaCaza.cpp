@@ -9,6 +9,11 @@ ANaveEnemigaCaza::ANaveEnemigaCaza()
 
 	mallaNaveEnemiga->SetStaticMesh(ShipMesh.Object);
 	mallaNaveEnemiga->BodyInstance.SetCollisionProfileName("NaveCaza");
+	//mallaNaveEnemiga->SetEnableGravity(false);
+	//mallaNaveEnemiga->SetSimulatePhysics(true);
+	
+	//mallaNaveEnemiga->SetGravityScale(0.f);
+	mallaNaveEnemiga->SetNotifyRigidBodyCollision(true);
 	mallaNaveEnemiga->OnComponentHit.AddDynamic(this, &ANaveEnemigaCaza::OnHit);
 
 	PosicionInicialX = 0.0f;

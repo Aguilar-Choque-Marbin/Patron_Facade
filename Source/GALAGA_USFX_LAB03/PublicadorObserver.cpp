@@ -41,10 +41,10 @@ void APublicadorObserver::NotificadorSubscriptores()
 {
 	for (AActor* Subs : Subscriptores)
 	{
-		Subscriptor = Cast<IISubscriptor>(Subs);
-		if (Subscriptor)
+		ISubscriptor = Cast<IISubscriptor>(Subs);
+		if (ISubscriptor)
 		{
-			Subscriptor->Actualizar(this);
+			ISubscriptor->Actualizar(this);
 		}
 	}
 }

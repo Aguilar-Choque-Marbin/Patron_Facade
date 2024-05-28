@@ -7,11 +7,11 @@
 
 
 
-//ANaveEnemiga* AFabricaNavesTerrestres::CreacionNave(FString Nave)
-//{
-//	if (Nave.Equals("Reabastecimiento"))
-//	{
-//		return GetWorld()->SpawnActor<ANaveEnemigaReabastecimiento>(ANaveEnemigaReabastecimiento::StaticClass());
-//	}
-//	else return nullptr;
-//}
+ANaveEnemiga* AFabricaNavesTerrestres::CreacionNave(FString Nave)
+{
+	if (Nave.Equals("Reabastecimiento"))
+	{
+		return GetWorld()->SpawnActor<ANaveEnemigaReabastecimiento>(ANaveEnemigaReabastecimiento::StaticClass());
+	}
+	else return nullptr;
+}

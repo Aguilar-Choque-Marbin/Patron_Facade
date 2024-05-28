@@ -18,6 +18,8 @@ void EmptyLinkFunctionForGeneratedCodeSubscriptor1() {}
 	ENGINE_API UClass* Z_Construct_UClass_AActor();
 	UPackage* Z_Construct_UPackage__Script_GALAGA_USFX_LAB03();
 	ENGINE_API UClass* Z_Construct_UClass_UStaticMeshComponent_NoRegister();
+	GALAGA_USFX_LAB03_API UClass* Z_Construct_UClass_AGALAGA_USFX_LAB03Projectile_NoRegister();
+	GALAGA_USFX_LAB03_API UClass* Z_Construct_UClass_AMotores_NoRegister();
 	GALAGA_USFX_LAB03_API UClass* Z_Construct_UClass_AReloj_NoRegister();
 	GALAGA_USFX_LAB03_API UClass* Z_Construct_UClass_UISubscriptor_NoRegister();
 	GALAGA_USFX_LAB03_API UClass* Z_Construct_UClass_UITransformar_NoRegister();
@@ -39,6 +41,14 @@ void EmptyLinkFunctionForGeneratedCodeSubscriptor1() {}
 		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_MallaSub1_MetaData[];
 #endif
 		static const UE4CodeGen_Private::FObjectPropertyParams NewProp_MallaSub1;
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_Proyectil_MetaData[];
+#endif
+		static const UE4CodeGen_Private::FObjectPropertyParams NewProp_Proyectil;
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_EscudoNave_MetaData[];
+#endif
+		static const UE4CodeGen_Private::FObjectPropertyParams NewProp_EscudoNave;
 #if WITH_METADATA
 		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_Reloj_MetaData[];
 #endif
@@ -67,6 +77,20 @@ void EmptyLinkFunctionForGeneratedCodeSubscriptor1() {}
 #endif
 	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UClass_ASubscriptor1_Statics::NewProp_MallaSub1 = { "MallaSub1", nullptr, (EPropertyFlags)0x00100000000a0009, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(ASubscriptor1, MallaSub1), Z_Construct_UClass_UStaticMeshComponent_NoRegister, METADATA_PARAMS(Z_Construct_UClass_ASubscriptor1_Statics::NewProp_MallaSub1_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_ASubscriptor1_Statics::NewProp_MallaSub1_MetaData)) };
 #if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_ASubscriptor1_Statics::NewProp_Proyectil_MetaData[] = {
+		{ "ModuleRelativePath", "Subscriptor1.h" },
+	};
+#endif
+	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UClass_ASubscriptor1_Statics::NewProp_Proyectil = { "Proyectil", nullptr, (EPropertyFlags)0x0010000000000000, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(ASubscriptor1, Proyectil), Z_Construct_UClass_AGALAGA_USFX_LAB03Projectile_NoRegister, METADATA_PARAMS(Z_Construct_UClass_ASubscriptor1_Statics::NewProp_Proyectil_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_ASubscriptor1_Statics::NewProp_Proyectil_MetaData)) };
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_ASubscriptor1_Statics::NewProp_EscudoNave_MetaData[] = {
+		{ "Comment", "///cambiar\n" },
+		{ "ModuleRelativePath", "Subscriptor1.h" },
+		{ "ToolTip", "cambiar" },
+	};
+#endif
+	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UClass_ASubscriptor1_Statics::NewProp_EscudoNave = { "EscudoNave", nullptr, (EPropertyFlags)0x0010000000000000, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(ASubscriptor1, EscudoNave), Z_Construct_UClass_AMotores_NoRegister, METADATA_PARAMS(Z_Construct_UClass_ASubscriptor1_Statics::NewProp_EscudoNave_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_ASubscriptor1_Statics::NewProp_EscudoNave_MetaData)) };
+#if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_ASubscriptor1_Statics::NewProp_Reloj_MetaData[] = {
 		{ "Category", "Subscriptor" },
 		{ "ModuleRelativePath", "Subscriptor1.h" },
@@ -75,6 +99,8 @@ void EmptyLinkFunctionForGeneratedCodeSubscriptor1() {}
 	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UClass_ASubscriptor1_Statics::NewProp_Reloj = { "Reloj", nullptr, (EPropertyFlags)0x0040000000020001, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(ASubscriptor1, Reloj), Z_Construct_UClass_AReloj_NoRegister, METADATA_PARAMS(Z_Construct_UClass_ASubscriptor1_Statics::NewProp_Reloj_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_ASubscriptor1_Statics::NewProp_Reloj_MetaData)) };
 	const UE4CodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_ASubscriptor1_Statics::PropPointers[] = {
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ASubscriptor1_Statics::NewProp_MallaSub1,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ASubscriptor1_Statics::NewProp_Proyectil,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ASubscriptor1_Statics::NewProp_EscudoNave,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ASubscriptor1_Statics::NewProp_Reloj,
 	};
 		const UE4CodeGen_Private::FImplementedInterfaceParams Z_Construct_UClass_ASubscriptor1_Statics::InterfaceParams[] = {
@@ -108,7 +134,7 @@ void EmptyLinkFunctionForGeneratedCodeSubscriptor1() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(ASubscriptor1, 1036554348);
+	IMPLEMENT_CLASS(ASubscriptor1, 559074493);
 	template<> GALAGA_USFX_LAB03_API UClass* StaticClass<ASubscriptor1>()
 	{
 		return ASubscriptor1::StaticClass();

@@ -4,6 +4,9 @@
 
 #include "CoreMinimal.h"
 #include "GameFramework/Character.h"
+
+#include "MovimientoNodriza.h"
+
 #include "GALAGA_USFX_LAB03Pawn.generated.h"
 
 UCLASS(Blueprintable)
@@ -22,6 +25,8 @@ class AGALAGA_USFX_LAB03Pawn : public APawn
 	/** Camera boom positioning the camera above the character */
 	UPROPERTY(Category = Camera, VisibleAnywhere, BlueprintReadOnly, meta = (AllowPrivateAccess = "true"))
 	class USpringArmComponent* CameraBoom;
+
+	//UMovimientoNodriza* MovimientoNavePawn;
 
 public:
 	AGALAGA_USFX_LAB03Pawn();

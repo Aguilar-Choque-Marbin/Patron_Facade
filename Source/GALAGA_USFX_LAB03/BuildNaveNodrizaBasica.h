@@ -16,7 +16,7 @@ public:
 	// Sets default values for this actor's properties
 	ABuildNaveNodrizaBasica();
 
-	//class ANaveNodriza* GenerarNave1;
+	class ANaveNodriza* GenerarNave1;
 
 protected:
 	// Called when the game starts or when spawned
@@ -27,10 +27,10 @@ public:
 	virtual void Tick(float DeltaTime) override;
 
 public:
-	//virtual void ConstruirNuevaNave(int y) override;
-	//virtual void ConstruirArmas(int u) override;
-	//virtual void ConstruirMotores(int i) override;
-	//virtual void ConstruirProyectiles(int o) override;
-	//virtual ANaveNodriza* NaveNodriza() override;
+	virtual void ConstruirNuevaNave(int y) override;
+	virtual void ConstruirArmas(int u) override;
+	virtual void ConstruirMotores(int i) override;
+	virtual void ConstruirProyectiles(int o) override;
+	virtual ANaveNodriza* NaveNodriza() override;
 
 };

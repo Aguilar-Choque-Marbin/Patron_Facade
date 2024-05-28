@@ -27,16 +27,16 @@ public:
 	virtual void Tick(float DeltaTime) override;
 
 public:
-	//class AMotores* Motor;
-	//class AArmaNave* Arma;
-	//class ANaveSpawn* Spawn;
-	//class AGALAGA_USFX_LAB03Projectile* Proyectil;
+	class AMotores* Motor;
+	class AArmaNave* Arma;
+	class ANaveSpawn* Spawn;
+	class AGALAGA_USFX_LAB03Projectile* Proyectil;
 
 public:
-	//void NodrizaSpawn(int a) override;
-	//void NodrizaMotor(int b) override;
-	//void NodrizaProyectil(int c) override;
-	//void NodrizaArma(int d) override;
+	void NodrizaSpawn(int a) override;
+	void NodrizaMotor(int b) override;
+	void NodrizaProyectil(int c) override;
+	void NodrizaArma(int d) override;
 
 	float TiempoDeDisparo;
 	float Intervalo;

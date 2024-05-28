@@ -3,7 +3,7 @@
   <ItemGroup>
     <None Include="..\..\GALAGA_USFX_LAB03.uproject" />
     <Filter Include="Source">
-      <UniqueIdentifier>{DD48BB1E-B228-408F-A6A7-6FEF1ADB6224}</UniqueIdentifier>
+      <UniqueIdentifier>{03F48B1E-2A5F-4CBE-B1FD-25EDFB16C53E}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Source\GALAGA_USFX_LAB03.Target.cs">
       <Filter>Source</Filter>
@@ -14,7 +14,7 @@
     <None Include="..\..\.gitattributes" />
     <None Include="..\..\.gitignore" />
     <Filter Include="Config">
-      <UniqueIdentifier>{2A27BF12-D801-45EC-A3DE-038D4200A4F2}</UniqueIdentifier>
+      <UniqueIdentifier>{8F9E8B7A-63D4-4E82-8F81-FE03ED5D637F}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Config\DefaultEditor.ini">
       <Filter>Config</Filter>
@@ -32,7 +32,7 @@
       <Filter>Config</Filter>
     </None>
     <Filter Include="Source\GALAGA_USFX_LAB03">
-      <UniqueIdentifier>{109D226F-50C9-4162-8442-F4B52E44DDAC}</UniqueIdentifier>
+      <UniqueIdentifier>{9F0DB84C-45B8-4C00-917B-036EBA3DB6D2}</UniqueIdentifier>
     </Filter>
     <ClCompile Include="..\..\Source\GALAGA_USFX_LAB03\ArmaNave.cpp">
       <Filter>Source\GALAGA_USFX_LAB03</Filter>
@@ -56,6 +56,30 @@
       <Filter>Source\GALAGA_USFX_LAB03</Filter>
     </ClCompile>
     <ClInclude Include="..\..\Source\GALAGA_USFX_LAB03\DirectorNaveNodriza.h">
+      <Filter>Source\GALAGA_USFX_LAB03</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\GALAGA_USFX_LAB03\Estado.cpp">
+      <Filter>Source\GALAGA_USFX_LAB03</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\GALAGA_USFX_LAB03\Estado.h">
+      <Filter>Source\GALAGA_USFX_LAB03</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\GALAGA_USFX_LAB03\EstadoNaveDefensa.cpp">
+      <Filter>Source\GALAGA_USFX_LAB03</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\GALAGA_USFX_LAB03\EstadoNaveDefensa.h">
+      <Filter>Source\GALAGA_USFX_LAB03</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\GALAGA_USFX_LAB03\EstadoNaveLetal.cpp">
+      <Filter>Source\GALAGA_USFX_LAB03</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\GALAGA_USFX_LAB03\EstadoNaveLetal.h">
+      <Filter>Source\GALAGA_USFX_LAB03</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\GALAGA_USFX_LAB03\EstadoNaveNeutra.cpp">
+      <Filter>Source\GALAGA_USFX_LAB03</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\GALAGA_USFX_LAB03\EstadoNaveNeutra.h">
       <Filter>Source\GALAGA_USFX_LAB03</Filter>
     </ClInclude>
     <ClCompile Include="..\..\Source\GALAGA_USFX_LAB03\FabricaNaves.cpp">
@@ -121,6 +145,12 @@
     <ClInclude Include="..\..\Source\GALAGA_USFX_LAB03\IBuildNave.h">
       <Filter>Source\GALAGA_USFX_LAB03</Filter>
     </ClInclude>
+    <ClCompile Include="..\..\Source\GALAGA_USFX_LAB03\IEstados.cpp">
+      <Filter>Source\GALAGA_USFX_LAB03</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\GALAGA_USFX_LAB03\IEstados.h">
+      <Filter>Source\GALAGA_USFX_LAB03</Filter>
+    </ClInclude>
     <ClCompile Include="..\..\Source\GALAGA_USFX_LAB03\INaveNodriza.cpp">
       <Filter>Source\GALAGA_USFX_LAB03</Filter>
     </ClCompile>
@@ -151,6 +181,12 @@
     <ClInclude Include="..\..\Source\GALAGA_USFX_LAB03\MovimientoNaves.h">
       <Filter>Source\GALAGA_USFX_LAB03</Filter>
     </ClInclude>
+    <ClCompile Include="..\..\Source\GALAGA_USFX_LAB03\MovimientoNodriza.cpp">
+      <Filter>Source\GALAGA_USFX_LAB03</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\GALAGA_USFX_LAB03\MovimientoNodriza.h">
+      <Filter>Source\GALAGA_USFX_LAB03</Filter>
+    </ClInclude>
     <ClCompile Include="..\..\Source\GALAGA_USFX_LAB03\NaveEnemiga.cpp">
       <Filter>Source\GALAGA_USFX_LAB03</Filter>
     </ClCompile>
@@ -179,6 +215,12 @@
       <Filter>Source\GALAGA_USFX_LAB03</Filter>
     </ClCompile>
     <ClInclude Include="..\..\Source\GALAGA_USFX_LAB03\NaveEnemigaTransporte.h">
+      <Filter>Source\GALAGA_USFX_LAB03</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\GALAGA_USFX_LAB03\NaveEspecialista.cpp">
+      <Filter>Source\GALAGA_USFX_LAB03</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\GALAGA_USFX_LAB03\NaveEspecialista.h">
       <Filter>Source\GALAGA_USFX_LAB03</Filter>
     </ClInclude>
     <ClCompile Include="..\..\Source\GALAGA_USFX_LAB03\NaveNodriza.cpp">

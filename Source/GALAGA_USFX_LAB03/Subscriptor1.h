@@ -6,6 +6,9 @@
 #include "GameFramework/Actor.h"
 #include "ISubscriptor.h"
 #include "ITransformar.h"
+
+#include "MovimientoNaves.h"
+
 #include "Subscriptor1.generated.h"
 
 UCLASS()
@@ -17,6 +20,9 @@ public:
 	// Sets default values for this actor's properties
 	ASubscriptor1();
 
+	//UMovimientoNaves* MovimientoNaves;
+
+
 protected:
 	// Called when the game starts or when spawned
 	virtual void BeginPlay() override;
@@ -27,22 +33,43 @@ public:
 
 public:
 
-	void EstablecerReloj(class AReloj* _Reloj);
+	void EstablecerReloj(class AReloj* _RelojSubscriptor);
 	void Actualizar(APublicadorObserver* _Publicador) override;
 	void TransformarSubscriptor() override;
+	void ActivarArmamento() override;
+	void MejoraArmamento(float DeltaTime) override;
+	void ActivarSuperVelocidad() override;
+	void MejorarSuperVelocidad() override;
+	void ActivarEscudo() override;
+	void MejorarImplementarEscudo() override;
 	void DestruirSubscripcion();
 
+
+
+	void Mover(float DeltaTime);
+
 	FString Tiempo;
+
+	int Armamento;
+	int SArmamento;
+	int Escudo;
+	int SVelocidad;
+
+	float Tiempos;
+	float Tiempos2;
+
+	FVector PosIn;
+	int Velocidad;
 
 
 	UPROPERTY(VisibleAnywhere, Category = "Malla")
 	UStaticMeshComponent* MallaSub1;
 
-	//UPROPERTY()
-	//class AProyectilNodriza* Proyectil; ///cambiar
+	UPROPERTY()
+	class AGALAGA_USFX_LAB03Projectile* Proyectil; ///cambiar
 
-	//UPROPERTY()
-	//class AEscudoNodriza* EscudoNave;  ///cambiar
+	UPROPERTY()
+	class AMotores* EscudoNave;  ///cambiar
 
 private:
 

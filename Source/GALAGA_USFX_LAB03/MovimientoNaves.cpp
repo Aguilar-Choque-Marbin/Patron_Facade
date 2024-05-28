@@ -18,7 +18,8 @@ UMovimientoNaves::UMovimientoNaves()
 void UMovimientoNaves::BeginPlay()
 {
 	Super::BeginPlay();
-
+	Velocidad = 100.0f;
+	VelocidadRotacion = 10.0f;
 	// ...
 	
 }
@@ -30,9 +31,28 @@ void UMovimientoNaves::TickComponent(float DeltaTime, ELevelTick TickType, FActo
 	Super::TickComponent(DeltaTime, TickType, ThisTickFunction);
 
 	// ...
+	AActor* Mover = GetOwner();
+	if (Mover)
+	{
+		float LimiteMaximo = 300.0f;
+		float LimiteMinimo = -300.0f;
+		FVector PosicionActual = Mover->GetActorLocation();
+		auto NuevaPosicion = PosicionActual + FVector(0.0f, DeltaTime * Velocidad, 0.0f);
+		if (NuevaPosicion.Y >= LimiteMaximo)
+		{
+			Velocidad *= -1;
+		}
+		if (NuevaPosicion.Y <= LimiteMinimo)
+		{
+			Velocidad *= -1;
+		}
+		Mover->SetActorLocation(NuevaPosicion);
+		// Agregar rotación
+		FRotator RotacionActual = Mover->GetActorRotation();
+		FRotator NuevaRotacion = RotacionActual + FRotator(0.0f, DeltaTime * VelocidadRotacion, 0.0f);
+		Mover->SetActorRotation(NuevaRotacion);
+	}
 }
 
-void UMovimientoNaves::MovimientoNaves()
-{
-}
+
 

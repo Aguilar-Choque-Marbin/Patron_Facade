@@ -8,6 +8,8 @@
 
 #include "DirectorNaveNodriza.h"
 #include "IBuildNave.h"
+#include "BuildNaveNodrizaBasica.h"
+#include "BuildNaveNodrizaConcreto.h"
 
 #include "FNiveles.generated.h"
 
@@ -30,25 +32,27 @@ public:
 
 public:
 
-	//AFabricaNaves* FabricaAereas;
-	//AFabricaNaves* FabricaTerrestres;
-	//AFabricaNaves* FabricaAcuaticas;
+	AFabricaNaves* FabricaAereas;
+	AFabricaNaves* FabricaTerrestres;
+	AFabricaNaves* FabricaAcuaticas;
 
-	//ADirectorNaveNodriza* DirectorNodriza;
-	//IIBuildNave* NaveNodrizaBasica;
-	//IIBuildNave* NaveNodrizaConcreto;
+	ADirectorNaveNodriza* DirectorNodriza;
+	ABuildNaveNodrizaBasica* NaveNodrizaBasica;
+	ABuildNaveNodrizaConcreto* NaveNodrizaConcreto;
 
-	//TArray<ANaveEnemiga*> TANavesEnemigas;
+	TArray<ANaveEnemiga*> TANavesEnemigas;
 
-	//FVector PosEscuadronAereas;
-	//FVector PosEscuadronTerrestres;
-	//FVector PosEscuadronAcuaticas;
+	FVector PosEscuadronAereas;
+	FVector PosEscuadronTerrestres;
+	FVector PosEscuadronAcuaticas;
 
-	//void GenerarFabricas();
-	//void CrearEscuadronAereas();
-	//void CrearEscuadronTerrestres();
-	//void CrearEscuadronAcuaticas();
-	//void CrearNodrizaBasica();
-	//void CrearNodrizaConcreto();
+	void GenerarFabricas();
+	void GenerarNodriza();
+	void CrearEscuadronAereas();
+	void CrearEscuadronTerrestres();
+	void CrearEscuadronAcuaticas();
+	void CrearNodrizaBasica();
+	void CrearNodrizaConcreto();
+	void CrearNivel(FString gen);
 
 };

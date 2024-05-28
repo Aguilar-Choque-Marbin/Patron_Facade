@@ -6,7 +6,7 @@
 AReloj::AReloj()
 {
     PrimaryActorTick.bCanEverTick = true;
-	//Hora = "00:00";
+
 }
 
 void AReloj::BeginPlay()

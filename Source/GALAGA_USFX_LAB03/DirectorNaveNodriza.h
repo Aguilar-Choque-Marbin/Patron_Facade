@@ -16,7 +16,7 @@ public:
 	// Sets default values for this actor's properties
 	ADirectorNaveNodriza();
 
-	//IIBuildNave* GeneradorNaveNodriza;
+	IIBuildNave* GeneradorNaveNodriza;
 
 protected:
 	// Called when the game starts or when spawned
@@ -27,9 +27,9 @@ public:
 	virtual void Tick(float DeltaTime) override;
 
 public:
-	//void OrdenarConstruccionNaveNodriza(AActor* Generador);
-	//void CrearNaveNodriza();
-	//void CrearNaveNodriza2();
-	//class ANaveNodriza* CreacionNaveNodriza();
+	void OrdenarConstruccionNaveNodriza(AActor* Generador);
+	void CrearNaveNodriza();
+	void CrearNaveNodriza2();
+	class ANaveNodriza* CreacionNaveNodriza();
 
 };

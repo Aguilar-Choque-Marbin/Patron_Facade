@@ -33,7 +33,12 @@ AGALAGA_USFX_LAB03GameMode::AGALAGA_USFX_LAB03GameMode()
 	DefaultPawnClass = AGALAGA_USFX_LAB03Pawn::StaticClass();
 
 	PosicionNaveSub1 = FVector(-700.0f, 200.0f, 200.0f);
+	PosicionNaveSub2 = FVector(-700.0f, 800.0f, 200.0f);
+
 	TimeDay = 0.0f;
+	V = 0;
+	State = 1.0f;
+	Estado = 0;
 }
 
 
@@ -122,6 +127,9 @@ void AGALAGA_USFX_LAB03GameMode::BeginPlay()
 	//FACADE
 
 	//Nivel = GetWorld()->SpawnActor<AFNiveles>(AFNiveles::StaticClass());
+	//Nivel->CrearNivel("Basico");
+	//Nivel->CrearNivel("Intermedio");
+	//Nivel->CrearNivel("Nodriza");
 	//Nivel->GenerarFabricas();
 	//Nivel->CrearEscuadronAereas();
 	//Nivel->CrearEscuadronTerrestres();
@@ -133,49 +141,60 @@ void AGALAGA_USFX_LAB03GameMode::BeginPlay()
 
 	//Observer
 	Reloj=GetWorld()->SpawnActor<AReloj>(AReloj::StaticClass());
-	NaveSubscriptor1=GetWorld()->SpawnActor<ASubscriptor1>(ASubscriptor1::StaticClass());
-	NaveSubscriptor1->EstablecerReloj(Reloj);
-	NaveSubscriptor1->SetActorLocation(PosicionNaveSub1);
-	//NaveSubscriptor2->GetWorld()->SpawnActor<ASubscriptor2>(ASubscriptor2::StaticClass());
-	//NaveSubscriptor2->EstablecerReloj(Reloj);
+
+	for (int i = 0; i < 2; i++)
+	{
+		NaveSubscriptor1 = GetWorld()->SpawnActor<ASubscriptor1>(ASubscriptor1::StaticClass());
+		NavesSub1.Add(NaveSubscriptor1);
+
+		NaveSubscriptor1->EstablecerReloj(Reloj);
+		NaveSubscriptor1->SetActorLocation(PosicionNaveSub1);
+
+		PosicionNaveSub1.X = PosicionNaveSub1.X + 200.0f;
+		PosicionNaveSub1.Y = PosicionNaveSub1.Y - 200.0f;
+	}
+	
+	for (int i = 0; i < 2; i++)
+	{
+		NaveSubscriptor2 = GetWorld()->SpawnActor<ASubscriptor2>(ASubscriptor2::StaticClass());
+		NavesSub2.Add(NaveSubscriptor2);
+
+		NaveSubscriptor2->EstablecerReloj(Reloj);
+		NaveSubscriptor2->SetActorLocation(PosicionNaveSub2);
+
+		PosicionNaveSub2.X = PosicionNaveSub2.X + 200.0f;
+		PosicionNaveSub2.Y = PosicionNaveSub2.Y + 200.0f;
+	}
 
 }
 
 void AGALAGA_USFX_LAB03GameMode::Tick(float DeltaTime)
 {
 	Super::Tick(DeltaTime);
-	//TiempoTranscurrido++;
-
-	//if (TiempoTranscurrido >= 100)
-	//{
-	//	int numeroEnemigo = FMath::RandRange(0,9);
-	//	if (GEngine)
-	//	{
-	//		GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Blue, FString::Printf(TEXT("Hola estoy aqui")));
-
-	//		GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Green, FString::Printf(TEXT("Entero: %d"), numeroEnemigo));
-	//	}
-
-	//	TANavesEnemigas[numeroEnemigo]->SetVelocidad(0);
-	//}
-
 
 	//Observer
 	TimeDay += DeltaTime;
 	GEngine->AddOnScreenDebugMessage(-1, 15.0f, FColor::Red, FString::Printf(
-		TEXT("Hora del dia: %f"), TimeDay));
+	TEXT("Hora del dia: %f"), TimeDay));
 
 	if (TimeDay >= 12.0f) {
 		Reloj->SetHora("12:00");
+		for (ASubscriptor1* Subs1 : NavesSub1)
+		{
+			Subs1->DestruirSubscripcion();
+		}
 	}
 	if (TimeDay >= 18.0f) {
 		Reloj->SetHora("18:00");
+
 	}
 	if (TimeDay >= 22.0f) {
 		Reloj->SetHora("22:00");
+
 	}
 	if (TimeDay >= 24.0f) {
-		NaveSubscriptor1->DestruirSubscripcion();
+		//NaveSubscriptor1->DestruirSubscripcion();
+		//NaveSubscriptor2->DestruirSubscripcion();
 		TimeDay = 0.0f;
 	}
 }
