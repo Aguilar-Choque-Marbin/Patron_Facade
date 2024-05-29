@@ -57,6 +57,9 @@ protected:
 	class ASubscriptor1* NaveSubscriptor1;
 	class ASubscriptor2* NaveSubscriptor2;
 
+	//State
+	class ANaveEspecialista* NaveEspecialista;
+
 public:
 	TArray<ASubscriptor1*> NavesSub1;
 	TArray<ASubscriptor2*> NavesSub2;
@@ -68,7 +71,8 @@ public:
 
 	FVector PosicionNaveSub1;
 	FVector PosicionNaveSub2;
-
+	
+	FRotator rotacionsub;
 };
 
 

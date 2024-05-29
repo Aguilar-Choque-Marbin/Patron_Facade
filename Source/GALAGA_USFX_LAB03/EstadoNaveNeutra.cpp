@@ -2,6 +2,7 @@
 
 
 #include "EstadoNaveNeutra.h"
+#include "NaveEspecialista.h"
 
 // Sets default values
 AEstadoNaveNeutra::AEstadoNaveNeutra()
@@ -23,5 +24,20 @@ void AEstadoNaveNeutra::Tick(float DeltaTime)
 {
 	Super::Tick(DeltaTime);
 
+}
+
+void AEstadoNaveNeutra::EnlazarNave(ANaveEspecialista* _NaveEsp)
+{
+	Nave = Cast<ANaveEspecialista>(_NaveEsp);
+}
+
+void AEstadoNaveNeutra::EstadoNeutral()
+{
+	GEngine->AddOnScreenDebugMessage(-1, 15.f, FColor::Yellow, FString::Printf(TEXT("La nave Enemiga esta en estado neutral")));
+}
+
+FString AEstadoNaveNeutra::ObtenerEstado()
+{
+	return "Sin Actividad";
 }
 

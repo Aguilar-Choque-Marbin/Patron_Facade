@@ -4,7 +4,7 @@
 #include "Subscriptor1.h"
 #include "Reloj.h"
 #include "GALAGA_USFX_LAB03Projectile.h"
-#include "Motores.h"
+#include "NaveEscudo.h"
 
 // Sets default values
 ASubscriptor1::ASubscriptor1()
@@ -29,6 +29,10 @@ ASubscriptor1::ASubscriptor1()
 	Tiempos2 = 1.0f;
 
 	Velocidad = 100.0f;
+
+	velocidad = 1.0f;
+	Radio = 300.0f;
+	TimeElapsed = 1.0f;
 }
 
 // Called when the game starts or when spawned
@@ -107,7 +111,7 @@ void ASubscriptor1::ActivarArmamento()
 	if (Armamento == 1)
 	{
 		FVector PosNave = GetActorLocation();
-		FRotator RotNave = GetActorRotation();
+		FRotator RotNave = FRotator(0.0f, 180.0f, 0.0f);
 
 		FVector DistanciaP = FVector(-100.0f, 0.0f, 0.0f);
 
@@ -123,7 +127,7 @@ void ASubscriptor1::MejoraArmamento(float DeltaTime)
 	if (SArmamento == 1)
 	{
 		FVector PosNave = GetActorLocation();
-		FRotator RotNave = GetActorRotation();
+		FRotator RotNave = FRotator(0.0f, 180.0f, 0.0f);
 
 		FVector DistanciaP = FVector(-300.0f, 0.0f, 0.0f);
 
@@ -154,7 +158,7 @@ void ASubscriptor1::MejorarImplementarEscudo()
 	if (Escudo == 1)
 	{
 		FVector PosNaveEscudo = GetActorLocation();
-		FRotator RotNaveEscudo = GetActorRotation();
+		FRotator RotNaveEscudo = FRotator(0.0f, 90.0f, 0.0f);;
 
 		FVector DistanciaPEscudo = FVector(-100.0f, 0.0f, 0.0f);
 
@@ -165,7 +169,7 @@ void ASubscriptor1::MejorarImplementarEscudo()
 			EscudoNave->Destroy();
 		}
 
-		EscudoNave = GetWorld()->SpawnActor<AMotores>(PosPEscudo, RotNaveEscudo);
+		EscudoNave = GetWorld()->SpawnActor<ANaveEscudo>(PosPEscudo, RotNaveEscudo);
 	}
 }
 
@@ -192,5 +196,19 @@ void ASubscriptor1::Mover(float DeltaTime)
 	}
 
 	SetActorLocation(NuevaPos);
+
+
+
+	// Actualizar el tiempo transcurrido
+	// 
+	// 
+	//TimeElapsed += DeltaTime * velocidad;
+
+	//// Calcular la nueva posición en el círculo
+	//float X = PosIn.X + Radio * FMath::Cos(TimeElapsed);
+	//float Y = PosIn.Y + Radio * FMath::Sin(TimeElapsed);
+
+	//// Actualizar la posición de la nave
+	//SetActorLocation(FVector(X, Y, PosIn.Z));
 }
 

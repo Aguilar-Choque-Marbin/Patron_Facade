@@ -4,7 +4,7 @@
 #include "Subscriptor2.h"
 #include "Reloj.h"
 #include "GALAGA_USFX_LAB03Projectile.h"
-#include "Motores.h"
+#include "NaveEscudo.h"
 
 // Sets default values
 ASubscriptor2::ASubscriptor2()
@@ -107,7 +107,7 @@ void ASubscriptor2::ActivarArmamento()
 	if (Armamento == 1)
 	{
 		FVector PosNave = GetActorLocation();
-		FRotator RotNave = GetActorRotation();
+		FRotator RotNave = FRotator(0.0f, 180.0f, 0.0f);
 
 		FVector DistanciaP = FVector(-100.0f, 0.0f, 0.0f);
 
@@ -123,9 +123,9 @@ void ASubscriptor2::MejoraArmamento(float DeltaTime)
 	if (SArmamento == 1)
 	{
 		FVector PosNave = GetActorLocation();
-		FRotator RotNave = GetActorRotation();
+		FRotator RotNave = FRotator(0.0f, 180.0f, 0.0f);
 
-		FVector DistanciaP = FVector(-300.0f, 0.0f, 0.0f);
+		FVector DistanciaP = FVector(-200.0f, 0.0f, 0.0f);
 
 		FVector PosP = PosNave + GetActorForwardVector() * DistanciaP;
 
@@ -154,7 +154,7 @@ void ASubscriptor2::MejorarImplementarEscudo()
 	if (Escudo == 1)
 	{
 		FVector PosNaveEscudo = GetActorLocation();
-		FRotator RotNaveEscudo = GetActorRotation();
+		FRotator RotNaveEscudo = FRotator(90.0f, 0.0f, 0.0f);;
 
 		FVector DistanciaPEscudo = FVector(-100.0f, 0.0f, 0.0f);
 
@@ -165,7 +165,7 @@ void ASubscriptor2::MejorarImplementarEscudo()
 			EscudoNave->Destroy();
 		}
 
-		EscudoNave = GetWorld()->SpawnActor<AMotores>(PosPEscudo, RotNaveEscudo);
+		EscudoNave = GetWorld()->SpawnActor<ANaveEscudo>(PosPEscudo, RotNaveEscudo);
 	}
 }
 

@@ -23,4 +23,18 @@ public:
 	// Called every frame
 	virtual void Tick(float DeltaTime) override;
 
+public:
+	
+	void GenerarDiferentesEstados(FString _State);
+	void DarEstado(class IIEstados* State);
+
+	class IIEstados* EstadoNaveDefensa;
+	class IIEstados* EstadoNaveNeutral;
+	class IIEstados* EstadoNaveLetal;
+
+	class IIEstados* Estado;
+
+	void EstadoDefensivo();
+	void EstadoNeutral();
+	void EstadoLetal();
 };

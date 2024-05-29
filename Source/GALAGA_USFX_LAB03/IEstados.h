@@ -22,4 +22,14 @@ class GALAGA_USFX_LAB03_API IIEstados
 
 	// Add interface functions to this class. This is the class that will be inherited to implement this interface.
 public:
+
+	virtual void EnlazarNave(class ANaveEspecialista* _NaveEsp) = 0;
+
+	virtual void EstadoDefensa() = 0;
+	virtual void EstadoNeutral() = 0;
+	virtual void EstadoLetal() = 0;
+
+	virtual FString ObtenerEstado() = 0;
+
+
 };

@@ -23,6 +23,8 @@
 #include "Subscriptor1.h"
 #include "Subscriptor2.h"
 
+#include "NaveEspecialista.h"
+
 
 
 AGALAGA_USFX_LAB03GameMode::AGALAGA_USFX_LAB03GameMode()
@@ -32,8 +34,10 @@ AGALAGA_USFX_LAB03GameMode::AGALAGA_USFX_LAB03GameMode()
 	// set default pawn class to our character class
 	DefaultPawnClass = AGALAGA_USFX_LAB03Pawn::StaticClass();
 
-	PosicionNaveSub1 = FVector(-700.0f, 200.0f, 200.0f);
-	PosicionNaveSub2 = FVector(-700.0f, 800.0f, 200.0f);
+	PosicionNaveSub1 = FVector(100.0f, 200.0f, 200.0f);
+	PosicionNaveSub2 = FVector(100.0f, 800.0f, 200.0f);
+
+	rotacionsub = FRotator(90.0f, 0.0f, 0.0f);
 
 	TimeDay = 0.0f;
 	V = 0;
@@ -142,30 +146,33 @@ void AGALAGA_USFX_LAB03GameMode::BeginPlay()
 	//Observer
 	Reloj=GetWorld()->SpawnActor<AReloj>(AReloj::StaticClass());
 
-	for (int i = 0; i < 2; i++)
-	{
+	//for (int i = 0; i < 2; i++)
+	//{
 		NaveSubscriptor1 = GetWorld()->SpawnActor<ASubscriptor1>(ASubscriptor1::StaticClass());
-		NavesSub1.Add(NaveSubscriptor1);
+		/*NavesSub1.Add(NaveSubscriptor1);*/
 
 		NaveSubscriptor1->EstablecerReloj(Reloj);
 		NaveSubscriptor1->SetActorLocation(PosicionNaveSub1);
 
-		PosicionNaveSub1.X = PosicionNaveSub1.X + 200.0f;
-		PosicionNaveSub1.Y = PosicionNaveSub1.Y - 200.0f;
-	}
+		//PosicionNaveSub1.X = PosicionNaveSub1.X + 200.0f;
+		//PosicionNaveSub1.Y = PosicionNaveSub1.Y - 200.0f;
+	//}
 	
-	for (int i = 0; i < 2; i++)
-	{
+	//for (int i = 0; i < 2; i++)
+	//{
 		NaveSubscriptor2 = GetWorld()->SpawnActor<ASubscriptor2>(ASubscriptor2::StaticClass());
-		NavesSub2.Add(NaveSubscriptor2);
+		//NavesSub2.Add(NaveSubscriptor2);
 
 		NaveSubscriptor2->EstablecerReloj(Reloj);
 		NaveSubscriptor2->SetActorLocation(PosicionNaveSub2);
 
-		PosicionNaveSub2.X = PosicionNaveSub2.X + 200.0f;
-		PosicionNaveSub2.Y = PosicionNaveSub2.Y + 200.0f;
-	}
+		//PosicionNaveSub2.X = PosicionNaveSub2.X + 200.0f;
+		//PosicionNaveSub2.Y = PosicionNaveSub2.Y + 200.0f;
+	//}
 
+
+	//State
+	/*NaveEspecialista = GetWorld()->SpawnActor<ANaveEspecialista>(ANaveEspecialista::StaticClass());*/
 }
 
 void AGALAGA_USFX_LAB03GameMode::Tick(float DeltaTime)
@@ -177,25 +184,50 @@ void AGALAGA_USFX_LAB03GameMode::Tick(float DeltaTime)
 	GEngine->AddOnScreenDebugMessage(-1, 15.0f, FColor::Red, FString::Printf(
 	TEXT("Hora del dia: %f"), TimeDay));
 
-	if (TimeDay >= 12.0f) {
+	if (TimeDay >= 12.0f && V==0) {
 		Reloj->SetHora("12:00");
-		for (ASubscriptor1* Subs1 : NavesSub1)
-		{
-			Subs1->DestruirSubscripcion();
-		}
+		NaveSubscriptor1->DestruirSubscripcion();
+		//for (ASubscriptor1* Subs1 : NavesSub1)
+		//{
+			//Subs1->DestruirSubscripcion();
+		//}
+		V++;
 	}
-	if (TimeDay >= 18.0f) {
+	if (TimeDay >= 18.0f && V==1) {
 		Reloj->SetHora("18:00");
-
+		V++;
 	}
-	if (TimeDay >= 22.0f) {
+	if (TimeDay >= 22.0f && V==2) {
 		Reloj->SetHora("22:00");
-
+		V++;
 	}
 	if (TimeDay >= 24.0f) {
 		//NaveSubscriptor1->DestruirSubscripcion();
 		//NaveSubscriptor2->DestruirSubscripcion();
 		TimeDay = 0.0f;
 	}
+
+
+	//Estate
+	//State += DeltaTime;
+
+	//if (State > 7.0f && Estado == 0)
+	//{
+	//	NaveEspecialista->GenerarDiferentesEstados("Neutro");
+	//	NaveEspecialista->EstadoNeutral();
+	//	Estado++;
+	//}
+	//else if (State > 14.0f && Estado == 1)
+	//{
+	//	NaveEspecialista->GenerarDiferentesEstados("Letal");
+	//	NaveEspecialista->EstadoLetal();
+	//	Estado++;
+	//}
+	//else if (State > 21.0f && Estado == 2)
+	//{
+	//	NaveEspecialista->GenerarDiferentesEstados("Defensivo");
+	//	NaveEspecialista->EstadoDefensivo();
+	//	Estado++;
+	//}
 }
 

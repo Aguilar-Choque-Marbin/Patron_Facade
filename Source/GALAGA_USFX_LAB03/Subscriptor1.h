@@ -61,6 +61,10 @@ public:
 	FVector PosIn;
 	int Velocidad;
 
+	float velocidad;
+	float Radio;
+	float TimeElapsed;
+
 
 	UPROPERTY(VisibleAnywhere, Category = "Malla")
 	UStaticMeshComponent* MallaSub1;
@@ -69,7 +73,7 @@ public:
 	class AGALAGA_USFX_LAB03Projectile* Proyectil; ///cambiar
 
 	UPROPERTY()
-	class AMotores* EscudoNave;  ///cambiar
+	class ANaveEscudo* EscudoNave;  ///cambiar
 
 private:
 

@@ -2,6 +2,7 @@
 
 
 #include "EstadoNaveLetal.h"
+#include "NaveEspecialista.h"
 
 // Sets default values
 AEstadoNaveLetal::AEstadoNaveLetal()
@@ -23,5 +24,20 @@ void AEstadoNaveLetal::Tick(float DeltaTime)
 {
 	Super::Tick(DeltaTime);
 
+}
+
+void AEstadoNaveLetal::EnlazarNave(ANaveEspecialista* _NaveEsp)
+{
+	Nave = Cast<ANaveEspecialista>(_NaveEsp);
+}
+
+void AEstadoNaveLetal::EstadoLetal()
+{
+	GEngine->AddOnScreenDebugMessage(-1, 15.f, FColor::Red, FString::Printf(TEXT("La nave Enemiga esta en estado letal")));
+}
+
+FString AEstadoNaveLetal::ObtenerEstado()
+{
+	return "Sin Actividad";
 }
 

@@ -17,6 +17,7 @@ void EmptyLinkFunctionForGeneratedCodeEstadoNaveLetal() {}
 	GALAGA_USFX_LAB03_API UClass* Z_Construct_UClass_AEstadoNaveLetal();
 	ENGINE_API UClass* Z_Construct_UClass_AActor();
 	UPackage* Z_Construct_UPackage__Script_GALAGA_USFX_LAB03();
+	GALAGA_USFX_LAB03_API UClass* Z_Construct_UClass_UIEstados_NoRegister();
 // End Cross Module References
 	void AEstadoNaveLetal::StaticRegisterNativesAEstadoNaveLetal()
 	{
@@ -31,6 +32,7 @@ void EmptyLinkFunctionForGeneratedCodeEstadoNaveLetal() {}
 #if WITH_METADATA
 		static const UE4CodeGen_Private::FMetaDataPairParam Class_MetaDataParams[];
 #endif
+		static const UE4CodeGen_Private::FImplementedInterfaceParams InterfaceParams[];
 		static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
 		static const UE4CodeGen_Private::FClassParams ClassParams;
 	};
@@ -44,6 +46,9 @@ void EmptyLinkFunctionForGeneratedCodeEstadoNaveLetal() {}
 		{ "ModuleRelativePath", "EstadoNaveLetal.h" },
 	};
 #endif
+		const UE4CodeGen_Private::FImplementedInterfaceParams Z_Construct_UClass_AEstadoNaveLetal_Statics::InterfaceParams[] = {
+			{ Z_Construct_UClass_UIEstados_NoRegister, (int32)VTABLE_OFFSET(AEstadoNaveLetal, IIEstados), false },
+		};
 	const FCppClassTypeInfoStatic Z_Construct_UClass_AEstadoNaveLetal_Statics::StaticCppClassTypeInfo = {
 		TCppClassTypeTraits<AEstadoNaveLetal>::IsAbstract,
 	};
@@ -54,11 +59,11 @@ void EmptyLinkFunctionForGeneratedCodeEstadoNaveLetal() {}
 		DependentSingletons,
 		nullptr,
 		nullptr,
-		nullptr,
+		InterfaceParams,
 		UE_ARRAY_COUNT(DependentSingletons),
 		0,
 		0,
-		0,
+		UE_ARRAY_COUNT(InterfaceParams),
 		0x009000A4u,
 		METADATA_PARAMS(Z_Construct_UClass_AEstadoNaveLetal_Statics::Class_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UClass_AEstadoNaveLetal_Statics::Class_MetaDataParams))
 	};
@@ -71,7 +76,7 @@ void EmptyLinkFunctionForGeneratedCodeEstadoNaveLetal() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(AEstadoNaveLetal, 620032606);
+	IMPLEMENT_CLASS(AEstadoNaveLetal, 3588541795);
 	template<> GALAGA_USFX_LAB03_API UClass* StaticClass<AEstadoNaveLetal>()
 	{
 		return AEstadoNaveLetal::StaticClass();

@@ -19,7 +19,7 @@ void EmptyLinkFunctionForGeneratedCodeSubscriptor2() {}
 	UPackage* Z_Construct_UPackage__Script_GALAGA_USFX_LAB03();
 	ENGINE_API UClass* Z_Construct_UClass_UStaticMeshComponent_NoRegister();
 	GALAGA_USFX_LAB03_API UClass* Z_Construct_UClass_AGALAGA_USFX_LAB03Projectile_NoRegister();
-	GALAGA_USFX_LAB03_API UClass* Z_Construct_UClass_AMotores_NoRegister();
+	GALAGA_USFX_LAB03_API UClass* Z_Construct_UClass_ANaveEscudo_NoRegister();
 	GALAGA_USFX_LAB03_API UClass* Z_Construct_UClass_AReloj_NoRegister();
 	GALAGA_USFX_LAB03_API UClass* Z_Construct_UClass_UISubscriptor_NoRegister();
 	GALAGA_USFX_LAB03_API UClass* Z_Construct_UClass_UITransformar_NoRegister();
@@ -89,7 +89,7 @@ void EmptyLinkFunctionForGeneratedCodeSubscriptor2() {}
 		{ "ToolTip", "cambiar" },
 	};
 #endif
-	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UClass_ASubscriptor2_Statics::NewProp_EscudoNave = { "EscudoNave", nullptr, (EPropertyFlags)0x0010000000000000, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(ASubscriptor2, EscudoNave), Z_Construct_UClass_AMotores_NoRegister, METADATA_PARAMS(Z_Construct_UClass_ASubscriptor2_Statics::NewProp_EscudoNave_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_ASubscriptor2_Statics::NewProp_EscudoNave_MetaData)) };
+	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UClass_ASubscriptor2_Statics::NewProp_EscudoNave = { "EscudoNave", nullptr, (EPropertyFlags)0x0010000000000000, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(ASubscriptor2, EscudoNave), Z_Construct_UClass_ANaveEscudo_NoRegister, METADATA_PARAMS(Z_Construct_UClass_ASubscriptor2_Statics::NewProp_EscudoNave_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_ASubscriptor2_Statics::NewProp_EscudoNave_MetaData)) };
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_ASubscriptor2_Statics::NewProp_Reloj_MetaData[] = {
 		{ "Category", "Subscriptor" },
@@ -134,7 +134,7 @@ void EmptyLinkFunctionForGeneratedCodeSubscriptor2() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(ASubscriptor2, 3985645453);
+	IMPLEMENT_CLASS(ASubscriptor2, 3274197057);
 	template<> GALAGA_USFX_LAB03_API UClass* StaticClass<ASubscriptor2>()
 	{
 		return ASubscriptor2::StaticClass();

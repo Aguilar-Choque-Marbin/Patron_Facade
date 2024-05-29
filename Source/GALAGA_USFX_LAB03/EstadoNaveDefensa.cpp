@@ -2,6 +2,7 @@
 
 
 #include "EstadoNaveDefensa.h"
+#include "NaveEspecialista.h"
 
 // Sets default values
 AEstadoNaveDefensa::AEstadoNaveDefensa()
@@ -23,5 +24,20 @@ void AEstadoNaveDefensa::Tick(float DeltaTime)
 {
 	Super::Tick(DeltaTime);
 
+}
+
+void AEstadoNaveDefensa::EnlazarNave(ANaveEspecialista* _NaveEsp)
+{
+	Nave = Cast<ANaveEspecialista>(_NaveEsp);
+}
+
+void AEstadoNaveDefensa::EstadoDefensa()
+{
+	GEngine->AddOnScreenDebugMessage(-1,15.f,FColor::Blue, FString::Printf(TEXT("La nave Enemiga esta en estado defensivo")));
+}
+
+FString AEstadoNaveDefensa::ObtenerEstado()
+{
+	return "Sin Actividad";
 }
 

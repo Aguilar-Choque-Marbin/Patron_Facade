@@ -4,10 +4,11 @@
 
 #include "CoreMinimal.h"
 #include "GameFramework/Actor.h"
+#include "IEstados.h"
 #include "EstadoNaveNeutra.generated.h"
 
 UCLASS()
-class GALAGA_USFX_LAB03_API AEstadoNaveNeutra : public AActor
+class GALAGA_USFX_LAB03_API AEstadoNaveNeutra : public AActor, public IIEstados
 {
 	GENERATED_BODY()
 	
@@ -21,6 +22,21 @@ protected:
 
 public:	
 	// Called every frame
-	virtual void Tick(float DeltaTime) override;
+	virtual void Tick(float DeltaTime) override; 
+
+public:
+
+	void EnlazarNave(class ANaveEspecialista* _NaveEsp) override;
+	void EstadoNeutral() override;
+	FString ObtenerEstado() override;
+
+private:
+
+	void EstadoDefensa() override {};
+	void EstadoLetal() override {};
+
+protected:
+
+	class ANaveEspecialista* Nave;
 
 };

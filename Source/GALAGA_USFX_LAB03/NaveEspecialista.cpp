@@ -2,6 +2,9 @@
 
 
 #include "NaveEspecialista.h"
+#include "EstadoNaveDefensa.h"
+#include "EstadoNaveLetal.h"
+#include "EstadoNaveNeutra.h"
 
 // Sets default values
 ANaveEspecialista::ANaveEspecialista()
@@ -23,5 +26,47 @@ void ANaveEspecialista::Tick(float DeltaTime)
 {
 	Super::Tick(DeltaTime);
 
+}
+
+void ANaveEspecialista::GenerarDiferentesEstados(FString _State)
+{
+	if (_State.Equals("Defensivo"))
+	{
+		EstadoNaveDefensa = GetWorld()->SpawnActor<AEstadoNaveDefensa>(AEstadoNaveDefensa::StaticClass());
+		EstadoNaveDefensa->EnlazarNave(this);
+		DarEstado(EstadoNaveDefensa);
+	}
+	if (_State.Equals("Letal"))
+	{
+		EstadoNaveLetal = GetWorld()->SpawnActor<AEstadoNaveLetal>(AEstadoNaveLetal::StaticClass());
+		EstadoNaveLetal->EnlazarNave(this);
+		DarEstado(EstadoNaveLetal);
+	}
+	if (_State.Equals("Neutro"))
+	{
+		EstadoNaveNeutral = GetWorld()->SpawnActor<AEstadoNaveNeutra>(AEstadoNaveNeutra::StaticClass());
+		EstadoNaveNeutral->EnlazarNave(this);
+		DarEstado(EstadoNaveNeutral);
+	}
+}
+
+	void ANaveEspecialista::DarEstado(IIEstados* State)
+{
+	Estado = State;
+}
+
+void ANaveEspecialista::EstadoDefensivo()
+{
+	Estado->EstadoDefensa();
+}
+
+void ANaveEspecialista::EstadoNeutral()
+{
+	Estado->EstadoNeutral();
+}
+
+void ANaveEspecialista::EstadoLetal()
+{
+	Estado->EstadoLetal();
 }
 
